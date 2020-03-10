@@ -121,81 +121,81 @@ Here are the links to jump directly to a specific table:
 Primary and foreign keys:
 
 <table width="100%" class="features">
-<tr><td width="30px"><img src="docs/imgs/flag_conll.png" width="25"/></td><td width="30px"><img src="docs/imgs/flag_dem.png" width="25"/></td><td width="25px"><img src="docs/imgs/base.svg" width="20px"/></td><td width="20px">1</td><td><b><code>id</code></b></td></tr>
-<tr><td width="30px"><img src="docs/imgs/flag_conll.png" width="25"/></td><td width="30px"><img src="docs/imgs/flag_dem.png" width="25"/></td><td width="25px"><img src="docs/imgs/base.svg" width="20px"/></td><td width="20px">1</td><td><b><code>text_id</code></b></td></tr>
+<tr><td width="56px"><img src="docs/imgs/flag_conll.png" width="25"/></td><td width="56px"><img src="docs/imgs/flag_dem.png" width="25"/></td><td width="45px"><img src="docs/imgs/base.svg" width="20px"/></td><td width="20px">1</td><td><b><code>id</code></b></td></tr>
+<tr><td width="56px"><img src="docs/imgs/flag_conll.png" width="25"/></td><td width="56px"><img src="docs/imgs/flag_dem.png" width="25"/></td><td width="45px"><img src="docs/imgs/base.svg" width="20px"/></td><td width="20px">1</td><td><b><code>text_id</code></b></td></tr>
 </table>
 
 Coverage of the chain in the text:
 
 <table width="100%" class="features">
-<tr><td width="30px"><img src="docs/imgs/flag_conll.png" width="25"/></td><td width="30px"><img src="docs/imgs/flag_dem.png" width="25"/></td><td width="25px"><img src="docs/imgs/base.svg" width="20px"/></td><td width="20px">2</td><td><b><code>size</code></b>: number of mentions</td></tr>
-<tr><td width="30px"><img src="docs/imgs/flag_conll.png" width="25"/></td><td width="30px"><img src="docs/imgs/flag_dem.png" width="25"/></td><td width="25px"><img src="docs/imgs/base.svg" width="20px"/></td><td width="20px">2</td><td><b><code>text_span</code></b>: number of tokens between the first and the last mention of the chain</td></tr>
-<tr><td width="30px"><img src="docs/imgs/flag_conll.png" width="25"/></td><td width="30px"><img src="docs/imgs/flag_dem.png" width="25"/></td><td width="25px"><img src="docs/imgs/base.svg" width="20px"/></td><td width="20px">2</td><td><b><code>text_coverage</code></b>: <code>text_span</code> divided by the number of tokens in the text</td></tr>
+<tr><td width="56px"><img src="docs/imgs/flag_conll.png" width="25"/></td><td width="56px"><img src="docs/imgs/flag_dem.png" width="25"/></td><td width="45px"><img src="docs/imgs/base.svg" width="20px"/></td><td width="20px">2</td><td><b><code>size</code></b>: number of mentions</td></tr>
+<tr><td width="56px"><img src="docs/imgs/flag_conll.png" width="25"/></td><td width="56px"><img src="docs/imgs/flag_dem.png" width="25"/></td><td width="45px"><img src="docs/imgs/base.svg" width="20px"/></td><td width="20px">2</td><td><b><code>text_span</code></b>: number of tokens between the first and the last mention of the chain</td></tr>
+<tr><td width="56px"><img src="docs/imgs/flag_conll.png" width="25"/></td><td width="56px"><img src="docs/imgs/flag_dem.png" width="25"/></td><td width="45px"><img src="docs/imgs/base.svg" width="20px"/></td><td width="20px">2</td><td><b><code>text_coverage</code></b>: <code>text_span</code> divided by the number of tokens in the text</td></tr>
 </table>
 
 Rank of the mentions:
 
 <table width="100%" class="features">
-<tr><td width="30px"><img src="docs/imgs/flag_conll.png" width="25"/></td><td width="30px"><img src="docs/imgs/flag_dem.png" width="25"/></td><td width="25px"><img src="docs/imgs/base.svg" width="20px"/></td><td width="20px">2</td><td><b><code>mean_mention_level</code></b>: level is the number of nested mentions (0 = outer mention, not nested)</td></tr>
-<tr><td width="30px"><img src="docs/imgs/flag_conll.png" width="25"/></td><td width="30px"><img src="docs/imgs/flag_dem.png" width="25"/></td><td width="25px"><img src="docs/imgs/base.svg" width="20px"/></td><td width="20px">2</td><td><b><code>{mean,median}_{sent,par,text}_mention_rank</code></b>: the mention rank is the position of the mention in the chain: the first mention of the chain has the rank 0. The sentence mention rank is the position of the mention in the chain in a specific sentence. For example, the second mention of the chain has the rank 1, but if it is the first mention of the chain <emph>in the sentence<emph> (that is, the first mention of the chain is in a different sentence), its sentence rank will be 0</td></tr>
+<tr><td width="56px"><img src="docs/imgs/flag_conll.png" width="25"/></td><td width="56px"><img src="docs/imgs/flag_dem.png" width="25"/></td><td width="45px"><img src="docs/imgs/base.svg" width="20px"/></td><td width="20px">2</td><td><b><code>mean_mention_level</code></b>: level is the number of nested mentions (0 = outer mention, not nested)</td></tr>
+<tr><td width="56px"><img src="docs/imgs/flag_conll.png" width="25"/></td><td width="56px"><img src="docs/imgs/flag_dem.png" width="25"/></td><td width="45px"><img src="docs/imgs/base.svg" width="20px"/></td><td width="20px">2</td><td><b><code>{mean,median}_{sent,par,text}_mention_rank</code></b>: the mention rank is the position of the mention in the chain: the first mention of the chain has the rank 0. The sentence mention rank is the position of the mention in the chain in a specific sentence. For example, the second mention of the chain has the rank 1, but if it is the first mention of the chain <emph>in the sentence<emph> (that is, the first mention of the chain is in a different sentence), its sentence rank will be 0</td></tr>
 </table>
 
 Distances between two consecutive mentions in the chain:
 
 <table width="100%" class="features">
-<tr><td width="30px"><img src="docs/imgs/flag_conll.png" width="25"/></td><td width="30px"><img src="docs/imgs/flag_dem.png" width="25"/></td><td width="25px"><img src="docs/imgs/base.svg" width="20px"/></td><td width="20px">2</td><td><b><code>{median,mean}_{token,mention,sent,par}_dist</code></b>: mean distance between two consecutive mentions in number of tokens, mentions, sentences, paragraphs</td></tr>
-<tr><td width="30px"><img src="docs/imgs/flag_conll.png" width="25"/></td><td width="30px"><img src="docs/imgs/flag_dem.png" width="25"/></td><td width="25px"><img src="docs/imgs/base.svg" width="20px"/></td><td width="20px">2</td><td><b><code>distribution_of_{token,mention,sent,par}_dist_{buckets}</code></b>: distribution in buckets of distances of consecutives mentions</td></tr>
-<tr><td width="30px"><img src="docs/imgs/flag_conll.png" width="25"/></td><td width="30px"><img src="docs/imgs/flag_dem.png" width="25"/></td><td width="25px"><img src="docs/imgs/base.svg" width="20px"/></td><td width="20px">2</td><td><b><code>distribution_of_mention_length_{buckets}</code></b>: distribution in buckets of lengths of the mentions of the chain</td></tr>
+<tr><td width="56px"><img src="docs/imgs/flag_conll.png" width="25"/></td><td width="56px"><img src="docs/imgs/flag_dem.png" width="25"/></td><td width="45px"><img src="docs/imgs/base.svg" width="20px"/></td><td width="20px">2</td><td><b><code>{median,mean}_{token,mention,sent,par}_dist</code></b>: mean distance between two consecutive mentions in number of tokens, mentions, sentences, paragraphs</td></tr>
+<tr><td width="56px"><img src="docs/imgs/flag_conll.png" width="25"/></td><td width="56px"><img src="docs/imgs/flag_dem.png" width="25"/></td><td width="45px"><img src="docs/imgs/base.svg" width="20px"/></td><td width="20px">2</td><td><b><code>distribution_of_{token,mention,sent,par}_dist_{buckets}</code></b>: distribution in buckets of distances of consecutives mentions</td></tr>
+<tr><td width="56px"><img src="docs/imgs/flag_conll.png" width="25"/></td><td width="56px"><img src="docs/imgs/flag_dem.png" width="25"/></td><td width="45px"><img src="docs/imgs/base.svg" width="20px"/></td><td width="20px">2</td><td><b><code>distribution_of_mention_length_{buckets}</code></b>: distribution in buckets of lengths of the mentions of the chain</td></tr>
 </table>
 
 Shape of the distribution of the distances between two consecutive mentions in the chain (the distribution is virtually never normal):
 
 <table width="100%" class="features">
-<tr><td width="30px"><img src="docs/imgs/flag_conll.png" width="25"/></td><td width="30px"><img src="docs/imgs/flag_dem.png" width="25"/></td><td width="25px"><img src="docs/imgs/base.svg" width="20px"/></td><td width="20px">2</td><td><b><code>dist_{skewness,kurtosis}</code></b></td></tr>
-<tr><td width="30px"><img src="docs/imgs/flag_conll.png" width="25"/></td><td width="30px"><img src="docs/imgs/flag_dem.png" width="25"/></td><td width="25px"><img src="docs/imgs/base.svg" width="20px"/></td><td width="20px">2</td><td><b><code>lafon</code></b>: Lafon’s burst coefficient (Lafon, Pierre (1984). <emph>Dépouillements et statistiques en lexicométrie</emph>, Slatkine) (see Oberle Bruno (2019). <emph>Chaînes de référence et structuration textuelle: quelques indicateurs...</emph> Journée d'études “Mesures statistiques et approches quantitatives”, 14 juin 2019, Strasbourg, France, and the <a href="http://boberle.com/publications/res/Oberle-2019_structure.pdf">slides</a> for visual examples). The higher the value, the less uniform are the mentions in the text: for instance, in the chain <code>xx.x.x..........xxx......xxxx</code> you see that the <code>x</code>'s are not evenly distributed, they form “bursts”</td></tr>
+<tr><td width="56px"><img src="docs/imgs/flag_conll.png" width="25"/></td><td width="56px"><img src="docs/imgs/flag_dem.png" width="25"/></td><td width="45px"><img src="docs/imgs/base.svg" width="20px"/></td><td width="20px">2</td><td><b><code>dist_{skewness,kurtosis}</code></b></td></tr>
+<tr><td width="56px"><img src="docs/imgs/flag_conll.png" width="25"/></td><td width="56px"><img src="docs/imgs/flag_dem.png" width="25"/></td><td width="45px"><img src="docs/imgs/base.svg" width="20px"/></td><td width="20px">2</td><td><b><code>lafon</code></b>: Lafon’s burst coefficient (Lafon, Pierre (1984). <emph>Dépouillements et statistiques en lexicométrie</emph>, Slatkine) (see Oberle Bruno (2019). <emph>Chaînes de référence et structuration textuelle: quelques indicateurs...</emph> Journée d'études “Mesures statistiques et approches quantitatives”, 14 juin 2019, Strasbourg, France, and the <a href="http://boberle.com/publications/res/Oberle-2019_structure.pdf">slides</a> for visual examples). The higher the value, the less uniform are the mentions in the text: for instance, in the chain <code>xx.x.x..........xxx......xxxx</code> you see that the <code>x</code>'s are not evenly distributed, they form “bursts”</td></tr>
 </table>
 
 
 Variation in the chain:
 
 <table width="100%" class="features">
-<tr><td width="30px"><img src="docs/imgs/flag_conll.png" width="25"/></td><td width="30px"><img src="docs/imgs/flag_dem.png" width="25"/></td><td width="25px"><img src="docs/imgs/ling.svg" width="20px"/></td><td width="20px">2</td><td><b><code>pattern_diversity</code></b>: number of tri-grams (of part of speech) of consecutive mentions divided by the number of mentions in the chain</td></tr>
-<tr><td width="30px"><img src="docs/imgs/flag_conll.png" width="25"/></td><td width="30px"><img src="docs/imgs/flag_dem.png" width="25"/></td><td width="25px"><img src="docs/imgs/ling.svg" width="20px"/></td><td width="20px">2</td><td><b><code>stability_coeff_string</code></b>: stability coefficient (a number between 0 and 1: if 0, all the nouns in the chain are different (ex.: the cat… the animal), if 1 all the nouns in the chain are the same (ex.: the cat… the cat…), if between there are some repetition and some difference</td></tr>
-<tr><td width="30px"><img src="docs/imgs/flag_conll.png" width="25"/></td><td width="30px"><img src="docs/imgs/flag_dem.png" width="25"/></td><td width="25px"><img src="docs/imgs/ling.svg" width="20px"/></td><td width="20px">2</td><td><b><code>stability_coeff_h_lemma</code></b>: same as before but only noun lemma are considered (and not the whole mention string)</td></tr>
+<tr><td width="56px"><img src="docs/imgs/flag_conll.png" width="25"/></td><td width="56px"><img src="docs/imgs/flag_dem.png" width="25"/></td><td width="45px"><img src="docs/imgs/ling.svg" width="20px"/></td><td width="20px">2</td><td><b><code>pattern_diversity</code></b>: number of tri-grams (of part of speech) of consecutive mentions divided by the number of mentions in the chain</td></tr>
+<tr><td width="56px"><img src="docs/imgs/flag_conll.png" width="25"/></td><td width="56px"><img src="docs/imgs/flag_dem.png" width="25"/></td><td width="45px"><img src="docs/imgs/ling.svg" width="20px"/></td><td width="20px">2</td><td><b><code>stability_coeff_string</code></b>: stability coefficient (a number between 0 and 1: if 0, all the nouns in the chain are different (ex.: the cat… the animal), if 1 all the nouns in the chain are the same (ex.: the cat… the cat…), if between there are some repetition and some difference</td></tr>
+<tr><td width="56px"><img src="docs/imgs/flag_conll.png" width="25"/></td><td width="56px"><img src="docs/imgs/flag_dem.png" width="25"/></td><td width="45px"><img src="docs/imgs/ling.svg" width="20px"/></td><td width="20px">2</td><td><b><code>stability_coeff_h_lemma</code></b>: same as before but only noun lemma are considered (and not the whole mention string)</td></tr>
 </table>
 
 Named entity type of the chain (for chain that have at least one mention that is a named entity):
 
 <table width="100%" class="features">
-<tr><td width="30px"><img src="docs/imgs/flag_conll.png" width="25"/></td><td width="30px"><img src="docs/imgs/flag_dem.png" width="25"/></td><td width="25px"><img src="docs/imgs/ling.svg" width="20px"/></td><td width="20px">2</td><td><b><code>type</code></b></td></tr>
+<tr><td width="56px"><img src="docs/imgs/flag_conll.png" width="25"/></td><td width="56px"><img src="docs/imgs/flag_dem.png" width="25"/></td><td width="45px"><img src="docs/imgs/ling.svg" width="20px"/></td><td width="20px">2</td><td><b><code>type</code></b></td></tr>
 </table>
 
 Proportions:
 
 <table width="100%" class="features">
-<tr><td width="30px"><img src="docs/imgs/flag_conll.png" width="25"/></td><td width="30px"><img src="docs/imgs/flag_dem.png" width="25"/></td><td width="25px"><img src="docs/imgs/base.svg" width="20px"/></td><td width="20px">2</td><td><b><code>outer_proportion</code></b>: an outer mention is a mention that is not nested</td></tr>
-<tr><td width="30px"><img src="docs/imgs/flag_conll.png" width="25"/></td><td width="30px"><img src="docs/imgs/flag_dem.png" width="25"/></td><td width="25px"><img src="docs/imgs/ling.svg" width="20px"/></td><td width="20px">2</td><td><b><code>proportion_of_named_entities</code></b></td></tr>
-<tr><td width="30px"><img src="docs/imgs/flag_conll.png" width="25"/></td><td width="30px"><img src="docs/imgs/flag_dem.png" width="25"/></td><td width="25px"><img src="docs/imgs/ling.svg" width="20px"/></td><td width="20px">2</td><td><b><code>has_multiple_speakers</code></b></td></tr>
-<tr><td width="30px"></td><td width="30px"><img src="docs/imgs/flag_dem.png" width="25"/></td><td width="25px"><img src="docs/imgs/ling.svg" width="20px"/></td><td width="20px">2</td><td><b><code>proportion_of_subjects</code></b></td></tr>
-<tr><td width="30px"><img src="docs/imgs/flag_conll.png" width="25"/></td><td width="30px"><img src="docs/imgs/flag_dem.png" width="25"/></td><td width="25px"><img src="docs/imgs/ling.svg" width="20px"/></td><td width="20px">2</td><td><b><code>proportion_of_mentions_in_pp</code></b></td></tr>
-<tr><td width="30px"><img src="docs/imgs/flag_conll.png" width="25"/></td><td width="30px"><img src="docs/imgs/flag_dem.png" width="25"/></td><td width="25px"><img src="docs/imgs/ling.svg" width="20px"/></td><td width="20px">2</td><td><b><code>proportion_of_mentions_in_main_clause</code></b></td></tr>
-<tr><td width="30px"><img src="docs/imgs/flag_conll.png" width="25"/></td><td width="30px"><img src="docs/imgs/flag_dem.png" width="25"/></td><td width="25px"><img src="docs/imgs/ling.svg" width="20px"/></td><td width="20px">2</td><td><b><code>mean_node_depth</code></b>: depth of the syntactic head in the syntactic tree</td></tr>
-<tr><td width="30px"><img src="docs/imgs/flag_conll.png" width="25"/></td><td width="30px"><img src="docs/imgs/flag_dem.png" width="25"/></td><td width="25px"><img src="docs/imgs/ling.svg" width="20px"/></td><td width="20px">2</td><td><b><code>proportion_of_mention_with_dependents</code></b>: proportion of mention with at least one dependent</td></tr>
-<tr><td width="30px"><img src="docs/imgs/flag_conll.png" width="25"/></td><td width="30px"><img src="docs/imgs/flag_dem.png" width="25"/></td><td width="25px"><img src="docs/imgs/ling.svg" width="20px"/></td><td width="20px">2</td><td><b><code>proportion_of_{n,p,d,v,o}</code></b>: proportion of noun, pronoun, determiner (<emph>my, your</emph>, etc.), verb, other</td></tr>
-<tr><td width="30px"><img src="docs/imgs/flag_conll.png" width="25"/></td><td width="30px"><img src="docs/imgs/flag_dem.png" width="25"/></td><td width="25px"><img src="docs/imgs/ling.svg" width="20px"/></td><td width="20px">2</td><td><b><code>proportion_of_proper_nouns</code></b></td></tr>
-<tr><td width="30px"><img src="docs/imgs/flag_conll.png" width="25"/></td><td width="30px"><img src="docs/imgs/flag_dem.png" width="25"/></td><td width="25px"><img src="docs/imgs/ling.svg" width="20px"/></td><td width="20px">2</td><td><b><code>is_plural</code></b>: the chain has at least one mention that is tagged as plural</td></tr>
-<tr><td width="30px"><img src="docs/imgs/flag_conll.png" width="25"/></td><td width="30px"><img src="docs/imgs/flag_dem.png" width="25"/></td><td width="25px"><img src="docs/imgs/ling.svg" width="20px"/></td><td width="20px">2</td><td><b><code>proportion_of_first_arguments</code></b>: proportion of mentions that are the first argument in their argument structure</td></tr>
+<tr><td width="56px"><img src="docs/imgs/flag_conll.png" width="25"/></td><td width="56px"><img src="docs/imgs/flag_dem.png" width="25"/></td><td width="45px"><img src="docs/imgs/base.svg" width="20px"/></td><td width="20px">2</td><td><b><code>outer_proportion</code></b>: an outer mention is a mention that is not nested</td></tr>
+<tr><td width="56px"><img src="docs/imgs/flag_conll.png" width="25"/></td><td width="56px"><img src="docs/imgs/flag_dem.png" width="25"/></td><td width="45px"><img src="docs/imgs/ling.svg" width="20px"/></td><td width="20px">2</td><td><b><code>proportion_of_named_entities</code></b></td></tr>
+<tr><td width="56px"><img src="docs/imgs/flag_conll.png" width="25"/></td><td width="56px"><img src="docs/imgs/flag_dem.png" width="25"/></td><td width="45px"><img src="docs/imgs/ling.svg" width="20px"/></td><td width="20px">2</td><td><b><code>has_multiple_speakers</code></b></td></tr>
+<tr><td width="56px"></td><td width="56px"><img src="docs/imgs/flag_dem.png" width="25"/></td><td width="45px"><img src="docs/imgs/ling.svg" width="20px"/></td><td width="20px">2</td><td><b><code>proportion_of_subjects</code></b></td></tr>
+<tr><td width="56px"><img src="docs/imgs/flag_conll.png" width="25"/></td><td width="56px"><img src="docs/imgs/flag_dem.png" width="25"/></td><td width="45px"><img src="docs/imgs/ling.svg" width="20px"/></td><td width="20px">2</td><td><b><code>proportion_of_mentions_in_pp</code></b></td></tr>
+<tr><td width="56px"><img src="docs/imgs/flag_conll.png" width="25"/></td><td width="56px"><img src="docs/imgs/flag_dem.png" width="25"/></td><td width="45px"><img src="docs/imgs/ling.svg" width="20px"/></td><td width="20px">2</td><td><b><code>proportion_of_mentions_in_main_clause</code></b></td></tr>
+<tr><td width="56px"><img src="docs/imgs/flag_conll.png" width="25"/></td><td width="56px"><img src="docs/imgs/flag_dem.png" width="25"/></td><td width="45px"><img src="docs/imgs/ling.svg" width="20px"/></td><td width="20px">2</td><td><b><code>mean_node_depth</code></b>: depth of the syntactic head in the syntactic tree</td></tr>
+<tr><td width="56px"><img src="docs/imgs/flag_conll.png" width="25"/></td><td width="56px"><img src="docs/imgs/flag_dem.png" width="25"/></td><td width="45px"><img src="docs/imgs/ling.svg" width="20px"/></td><td width="20px">2</td><td><b><code>proportion_of_mention_with_dependents</code></b>: proportion of mention with at least one dependent</td></tr>
+<tr><td width="56px"><img src="docs/imgs/flag_conll.png" width="25"/></td><td width="56px"><img src="docs/imgs/flag_dem.png" width="25"/></td><td width="45px"><img src="docs/imgs/ling.svg" width="20px"/></td><td width="20px">2</td><td><b><code>proportion_of_{n,p,d,v,o}</code></b>: proportion of noun, pronoun, determiner (<emph>my, your</emph>, etc.), verb, other</td></tr>
+<tr><td width="56px"><img src="docs/imgs/flag_conll.png" width="25"/></td><td width="56px"><img src="docs/imgs/flag_dem.png" width="25"/></td><td width="45px"><img src="docs/imgs/ling.svg" width="20px"/></td><td width="20px">2</td><td><b><code>proportion_of_proper_nouns</code></b></td></tr>
+<tr><td width="56px"><img src="docs/imgs/flag_conll.png" width="25"/></td><td width="56px"><img src="docs/imgs/flag_dem.png" width="25"/></td><td width="45px"><img src="docs/imgs/ling.svg" width="20px"/></td><td width="20px">2</td><td><b><code>is_plural</code></b>: the chain has at least one mention that is tagged as plural</td></tr>
+<tr><td width="56px"><img src="docs/imgs/flag_conll.png" width="25"/></td><td width="56px"><img src="docs/imgs/flag_dem.png" width="25"/></td><td width="45px"><img src="docs/imgs/ling.svg" width="20px"/></td><td width="20px">2</td><td><b><code>proportion_of_first_arguments</code></b>: proportion of mentions that are the first argument in their argument structure</td></tr>
 </table>
 
 
 The following fields are copied from the <code>texts</code> table for convenience:
 
 <table width="100%" class="features">
-<tr><td width="30px"><img src="docs/imgs/flag_conll.png" width="25"/></td><td width="30px"><img src="docs/imgs/flag_dem.png" width="25"/></td><td width="25px"><img src="docs/imgs/ling.svg" width="20px"/></td><td width="20px">2</td><td><b><code>text_genre</code></b></td></tr>
-<tr><td width="30px"></td><td width="30px"><img src="docs/imgs/flag_dem.png" width="25"/></td><td width="25px"><img src="docs/imgs/ling.svg" width="20px"/></td><td width="20px">2</td><td><b><code>text_source</code></b></td></tr>
-<tr><td width="30px"><img src="docs/imgs/flag_conll.png" width="25"/></td><td width="30px"><img src="docs/imgs/flag_dem.png" width="25"/></td><td width="25px"><img src="docs/imgs/base.svg" width="20px"/></td><td width="20px">2</td><td><b><code>text_token_count</code></b></td></tr>
-<tr><td width="30px"><img src="docs/imgs/flag_conll.png" width="25"/></td><td width="30px"><img src="docs/imgs/flag_dem.png" width="25"/></td><td width="25px"><img src="docs/imgs/base.svg" width="20px"/></td><td width="20px">2</td><td><b><code>text_mention_count</code></b></td></tr>
-<tr><td width="30px"><img src="docs/imgs/flag_conll.png" width="25"/></td><td width="30px"><img src="docs/imgs/flag_dem.png" width="25"/></td><td width="25px"><img src="docs/imgs/base.svg" width="20px"/></td><td width="20px">2</td><td><b><code>text_chain_count</code></b></td></tr>
+<tr><td width="56px"><img src="docs/imgs/flag_conll.png" width="25"/></td><td width="56px"><img src="docs/imgs/flag_dem.png" width="25"/></td><td width="45px"><img src="docs/imgs/ling.svg" width="20px"/></td><td width="20px">2</td><td><b><code>text_genre</code></b></td></tr>
+<tr><td width="56px"></td><td width="56px"><img src="docs/imgs/flag_dem.png" width="25"/></td><td width="45px"><img src="docs/imgs/ling.svg" width="20px"/></td><td width="20px">2</td><td><b><code>text_source</code></b></td></tr>
+<tr><td width="56px"><img src="docs/imgs/flag_conll.png" width="25"/></td><td width="56px"><img src="docs/imgs/flag_dem.png" width="25"/></td><td width="45px"><img src="docs/imgs/base.svg" width="20px"/></td><td width="20px">2</td><td><b><code>text_token_count</code></b></td></tr>
+<tr><td width="56px"><img src="docs/imgs/flag_conll.png" width="25"/></td><td width="56px"><img src="docs/imgs/flag_dem.png" width="25"/></td><td width="45px"><img src="docs/imgs/base.svg" width="20px"/></td><td width="20px">2</td><td><b><code>text_mention_count</code></b></td></tr>
+<tr><td width="56px"><img src="docs/imgs/flag_conll.png" width="25"/></td><td width="56px"><img src="docs/imgs/flag_dem.png" width="25"/></td><td width="45px"><img src="docs/imgs/base.svg" width="20px"/></td><td width="20px">2</td><td><b><code>text_chain_count</code></b></td></tr>
 </table>
 
 
@@ -209,266 +209,266 @@ The following fields are copied from the <code>texts</code> table for convenienc
 Primary and foreign keys:
 
 <table width="100%" class="features">
-<tr><td width="30px"><img src="docs/imgs/flag_conll.png" width="25"/></td><td width="30px"><img src="docs/imgs/flag_dem.png" width="25"/></td><td width="25px"><img src="docs/imgs/base.svg" width="20px"/></td><td width="20px">1</td><td><b><code>id</code></b></td></tr>
-<tr><td width="30px"><img src="docs/imgs/flag_conll.png" width="25"/></td><td width="30px"><img src="docs/imgs/flag_dem.png" width="25"/></td><td width="25px"><img src="docs/imgs/base.svg" width="20px"/></td><td width="20px">1</td><td><b><code>chain_id</code></b></td></tr>
-<tr><td width="30px"><img src="docs/imgs/flag_conll.png" width="25"/></td><td width="30px"><img src="docs/imgs/flag_dem.png" width="25"/></td><td width="25px"><img src="docs/imgs/base.svg" width="20px"/></td><td width="20px">1</td><td><b><code>par_id</code></b></td></tr>
-<tr><td width="30px"><img src="docs/imgs/flag_conll.png" width="25"/></td><td width="30px"><img src="docs/imgs/flag_dem.png" width="25"/></td><td width="25px"><img src="docs/imgs/base.svg" width="20px"/></td><td width="20px">1</td><td><b><code>sent_id</code></b></td></tr>
-<tr><td width="30px"><img src="docs/imgs/flag_conll.png" width="25"/></td><td width="30px"><img src="docs/imgs/flag_dem.png" width="25"/></td><td width="25px"><img src="docs/imgs/base.svg" width="20px"/></td><td width="20px">1</td><td><b><code>text_id</code></b></td></tr>
+<tr><td width="56px"><img src="docs/imgs/flag_conll.png" width="25"/></td><td width="56px"><img src="docs/imgs/flag_dem.png" width="25"/></td><td width="45px"><img src="docs/imgs/base.svg" width="20px"/></td><td width="20px">1</td><td><b><code>id</code></b></td></tr>
+<tr><td width="56px"><img src="docs/imgs/flag_conll.png" width="25"/></td><td width="56px"><img src="docs/imgs/flag_dem.png" width="25"/></td><td width="45px"><img src="docs/imgs/base.svg" width="20px"/></td><td width="20px">1</td><td><b><code>chain_id</code></b></td></tr>
+<tr><td width="56px"><img src="docs/imgs/flag_conll.png" width="25"/></td><td width="56px"><img src="docs/imgs/flag_dem.png" width="25"/></td><td width="45px"><img src="docs/imgs/base.svg" width="20px"/></td><td width="20px">1</td><td><b><code>par_id</code></b></td></tr>
+<tr><td width="56px"><img src="docs/imgs/flag_conll.png" width="25"/></td><td width="56px"><img src="docs/imgs/flag_dem.png" width="25"/></td><td width="45px"><img src="docs/imgs/base.svg" width="20px"/></td><td width="20px">1</td><td><b><code>sent_id</code></b></td></tr>
+<tr><td width="56px"><img src="docs/imgs/flag_conll.png" width="25"/></td><td width="56px"><img src="docs/imgs/flag_dem.png" width="25"/></td><td width="45px"><img src="docs/imgs/base.svg" width="20px"/></td><td width="20px">1</td><td><b><code>text_id</code></b></td></tr>
 </table>
 
 Positions:
 
 <table width="100%" class="features">
-<tr><td width="30px"><img src="docs/imgs/flag_conll.png" width="25"/></td><td width="30px"><img src="docs/imgs/flag_dem.png" width="25"/></td><td width="25px"><img src="docs/imgs/base.svg" width="20px"/></td><td width="20px">1</td><td><b><code>{start,end}</code></b>: index of the first and last tokens of the mention in the sentence</td></tr>
-<tr><td width="30px"><img src="docs/imgs/flag_conll.png" width="25"/></td><td width="30px"><img src="docs/imgs/flag_dem.png" width="25"/></td><td width="25px"><img src="docs/imgs/base.svg" width="20px"/></td><td width="20px">1</td><td><b><code>par_{start,end}</code></b>: index of the first and last tokens of the mention in the paragraph</td></tr>
-<tr><td width="30px"><img src="docs/imgs/flag_conll.png" width="25"/></td><td width="30px"><img src="docs/imgs/flag_dem.png" width="25"/></td><td width="25px"><img src="docs/imgs/base.svg" width="20px"/></td><td width="20px">1</td><td><b><code>text_{start,end}</code></b>: index of the first and last tokens of the mention in the text</td></tr>
-<tr><td width="30px"><img src="docs/imgs/flag_conll.png" width="25"/></td><td width="30px"><img src="docs/imgs/flag_dem.png" width="25"/></td><td width="25px"><img src="docs/imgs/base.svg" width="20px"/></td><td width="20px">1</td><td><b><code>chain_mention_{index,rindex}</code></b>: index of the mention in the chain (first mention has index 0), from the start/from the end</td></tr>
-<tr><td width="30px"><img src="docs/imgs/flag_conll.png" width="25"/></td><td width="30px"><img src="docs/imgs/flag_dem.png" width="25"/></td><td width="25px"><img src="docs/imgs/base.svg" width="20px"/></td><td width="20px">1</td><td><b><code>{sent,par}_mention_index</code></b>: index of the mention in the sentence/paragraph</td></tr>
-<tr><td width="30px"><img src="docs/imgs/flag_conll.png" width="25"/></td><td width="30px"><img src="docs/imgs/flag_dem.png" width="25"/></td><td width="25px"><img src="docs/imgs/base.svg" width="20px"/></td><td width="20px">1</td><td><b><code>par_sent_index</code></b>: index of the sentence (in which the mention is) in the paragraph (first sentence of the paragraph has index 0)</td></tr>
-<tr><td width="30px"><img src="docs/imgs/flag_conll.png" width="25"/></td><td width="30px"><img src="docs/imgs/flag_dem.png" width="25"/></td><td width="25px"><img src="docs/imgs/base.svg" width="20px"/></td><td width="20px">1</td><td><b><code>text_mention_index</code></b>: index of the mention in the text (first mention of the text has index 0)</td></tr>
-<tr><td width="30px"><img src="docs/imgs/flag_conll.png" width="25"/></td><td width="30px"><img src="docs/imgs/flag_dem.png" width="25"/></td><td width="25px"><img src="docs/imgs/base.svg" width="20px"/></td><td width="20px">1</td><td><b><code>text_par_index</code></b>: index of the paragraph (in which the mention is) in the text (first paragraph of the text has index 0)</td></tr>
-<tr><td width="30px"><img src="docs/imgs/flag_conll.png" width="25"/></td><td width="30px"><img src="docs/imgs/flag_dem.png" width="25"/></td><td width="25px"><img src="docs/imgs/base.svg" width="20px"/></td><td width="20px">1</td><td><b><code>text_sent_index</code></b>: index of the sentence (in which the mention is) in the text (first sentence of the text has index 0)</td></tr>
-<tr><td width="30px"><img src="docs/imgs/flag_conll.png" width="25"/></td><td width="30px"><img src="docs/imgs/flag_dem.png" width="25"/></td><td width="25px"><img src="docs/imgs/base.svg" width="20px"/></td><td width="20px">1</td><td><b><code>{sent,par,text}_mention_rank</code></b>: the mention rank is the position of the mention in the chain: the first mention of the chain has the rank 0. The sentence mention rank is the position of the mention in the chain in a specific sentence. For example, the second mention of the chain has the rank 1, but if it is the first mention of the chain in the sentence (that is, the first mention of the chain is in a different sentence), its sentence rank will be 0</td></tr>
+<tr><td width="56px"><img src="docs/imgs/flag_conll.png" width="25"/></td><td width="56px"><img src="docs/imgs/flag_dem.png" width="25"/></td><td width="45px"><img src="docs/imgs/base.svg" width="20px"/></td><td width="20px">1</td><td><b><code>{start,end}</code></b>: index of the first and last tokens of the mention in the sentence</td></tr>
+<tr><td width="56px"><img src="docs/imgs/flag_conll.png" width="25"/></td><td width="56px"><img src="docs/imgs/flag_dem.png" width="25"/></td><td width="45px"><img src="docs/imgs/base.svg" width="20px"/></td><td width="20px">1</td><td><b><code>par_{start,end}</code></b>: index of the first and last tokens of the mention in the paragraph</td></tr>
+<tr><td width="56px"><img src="docs/imgs/flag_conll.png" width="25"/></td><td width="56px"><img src="docs/imgs/flag_dem.png" width="25"/></td><td width="45px"><img src="docs/imgs/base.svg" width="20px"/></td><td width="20px">1</td><td><b><code>text_{start,end}</code></b>: index of the first and last tokens of the mention in the text</td></tr>
+<tr><td width="56px"><img src="docs/imgs/flag_conll.png" width="25"/></td><td width="56px"><img src="docs/imgs/flag_dem.png" width="25"/></td><td width="45px"><img src="docs/imgs/base.svg" width="20px"/></td><td width="20px">1</td><td><b><code>chain_mention_{index,rindex}</code></b>: index of the mention in the chain (first mention has index 0), from the start/from the end</td></tr>
+<tr><td width="56px"><img src="docs/imgs/flag_conll.png" width="25"/></td><td width="56px"><img src="docs/imgs/flag_dem.png" width="25"/></td><td width="45px"><img src="docs/imgs/base.svg" width="20px"/></td><td width="20px">1</td><td><b><code>{sent,par}_mention_index</code></b>: index of the mention in the sentence/paragraph</td></tr>
+<tr><td width="56px"><img src="docs/imgs/flag_conll.png" width="25"/></td><td width="56px"><img src="docs/imgs/flag_dem.png" width="25"/></td><td width="45px"><img src="docs/imgs/base.svg" width="20px"/></td><td width="20px">1</td><td><b><code>par_sent_index</code></b>: index of the sentence (in which the mention is) in the paragraph (first sentence of the paragraph has index 0)</td></tr>
+<tr><td width="56px"><img src="docs/imgs/flag_conll.png" width="25"/></td><td width="56px"><img src="docs/imgs/flag_dem.png" width="25"/></td><td width="45px"><img src="docs/imgs/base.svg" width="20px"/></td><td width="20px">1</td><td><b><code>text_mention_index</code></b>: index of the mention in the text (first mention of the text has index 0)</td></tr>
+<tr><td width="56px"><img src="docs/imgs/flag_conll.png" width="25"/></td><td width="56px"><img src="docs/imgs/flag_dem.png" width="25"/></td><td width="45px"><img src="docs/imgs/base.svg" width="20px"/></td><td width="20px">1</td><td><b><code>text_par_index</code></b>: index of the paragraph (in which the mention is) in the text (first paragraph of the text has index 0)</td></tr>
+<tr><td width="56px"><img src="docs/imgs/flag_conll.png" width="25"/></td><td width="56px"><img src="docs/imgs/flag_dem.png" width="25"/></td><td width="45px"><img src="docs/imgs/base.svg" width="20px"/></td><td width="20px">1</td><td><b><code>text_sent_index</code></b>: index of the sentence (in which the mention is) in the text (first sentence of the text has index 0)</td></tr>
+<tr><td width="56px"><img src="docs/imgs/flag_conll.png" width="25"/></td><td width="56px"><img src="docs/imgs/flag_dem.png" width="25"/></td><td width="45px"><img src="docs/imgs/base.svg" width="20px"/></td><td width="20px">1</td><td><b><code>{sent,par,text}_mention_rank</code></b>: the mention rank is the position of the mention in the chain: the first mention of the chain has the rank 0. The sentence mention rank is the position of the mention in the chain in a specific sentence. For example, the second mention of the chain has the rank 1, but if it is the first mention of the chain in the sentence (that is, the first mention of the chain is in a different sentence), its sentence rank will be 0</td></tr>
 </table>
 
 Content:
 
 <table width="100%" class="features">
-<tr><td width="30px"><img src="docs/imgs/flag_conll.png" width="25"/></td><td width="30px"><img src="docs/imgs/flag_dem.png" width="25"/></td><td width="25px"><img src="docs/imgs/base.svg" width="20px"/></td><td width="20px">1</td><td><b><code>string</code></b>: the textual content of the mention</td></tr>
-<tr><td width="30px"><img src="docs/imgs/flag_conll.png" width="25"/></td><td width="30px"><img src="docs/imgs/flag_dem.png" width="25"/></td><td width="25px"><img src="docs/imgs/base.svg" width="20px"/></td><td width="20px">2</td><td><b><code>token_count</code></b>: the number of tokens</td></tr>
+<tr><td width="56px"><img src="docs/imgs/flag_conll.png" width="25"/></td><td width="56px"><img src="docs/imgs/flag_dem.png" width="25"/></td><td width="45px"><img src="docs/imgs/base.svg" width="20px"/></td><td width="20px">1</td><td><b><code>string</code></b>: the textual content of the mention</td></tr>
+<tr><td width="56px"><img src="docs/imgs/flag_conll.png" width="25"/></td><td width="56px"><img src="docs/imgs/flag_dem.png" width="25"/></td><td width="45px"><img src="docs/imgs/base.svg" width="20px"/></td><td width="20px">2</td><td><b><code>token_count</code></b>: the number of tokens</td></tr>
 </table>
 
 Nestedness:
 
 <table width="100%" class="features">
-<tr><td width="30px"><img src="docs/imgs/flag_conll.png" width="25"/></td><td width="30px"><img src="docs/imgs/flag_dem.png" width="25"/></td><td width="25px"><img src="docs/imgs/base.svg" width="20px"/></td><td width="20px">1</td><td><b><code>is_outer</code></b>: an outer mention is a mention that is not nested</td></tr>
-<tr><td width="30px"><img src="docs/imgs/flag_conll.png" width="25"/></td><td width="30px"><img src="docs/imgs/flag_dem.png" width="25"/></td><td width="25px"><img src="docs/imgs/base.svg" width="20px"/></td><td width="20px">1</td><td><b><code>parent</code></b>: id of the direct parent, that is the mention in the which the current mention is nested into (for nested mention)</td></tr>
-<tr><td width="30px"><img src="docs/imgs/flag_conll.png" width="25"/></td><td width="30px"><img src="docs/imgs/flag_dem.png" width="25"/></td><td width="25px"><img src="docs/imgs/base.svg" width="20px"/></td><td width="20px">1</td><td><b><code>level</code></b>: the level of nestedness (the outer mention has a level of 0)</td></tr>
+<tr><td width="56px"><img src="docs/imgs/flag_conll.png" width="25"/></td><td width="56px"><img src="docs/imgs/flag_dem.png" width="25"/></td><td width="45px"><img src="docs/imgs/base.svg" width="20px"/></td><td width="20px">1</td><td><b><code>is_outer</code></b>: an outer mention is a mention that is not nested</td></tr>
+<tr><td width="56px"><img src="docs/imgs/flag_conll.png" width="25"/></td><td width="56px"><img src="docs/imgs/flag_dem.png" width="25"/></td><td width="45px"><img src="docs/imgs/base.svg" width="20px"/></td><td width="20px">1</td><td><b><code>parent</code></b>: id of the direct parent, that is the mention in the which the current mention is nested into (for nested mention)</td></tr>
+<tr><td width="56px"><img src="docs/imgs/flag_conll.png" width="25"/></td><td width="56px"><img src="docs/imgs/flag_dem.png" width="25"/></td><td width="45px"><img src="docs/imgs/base.svg" width="20px"/></td><td width="20px">1</td><td><b><code>level</code></b>: the level of nestedness (the outer mention has a level of 0)</td></tr>
 </table>
 
 Dominant node in the syntactic tree:
 
 <table width="100%" class="features">
-<tr><td width="30px"></td><td width="30px"><img src="docs/imgs/flag_dem.png" width="25"/></td><td width="25px"><img src="docs/imgs/ling.svg" width="20px"/></td><td width="20px">1</td><td><b><code>node_id</code></b>: head node id (this id is not referenced elsewhere in the database, it is an arbitrary number used only for the two next fields)</td></tr>
-<tr><td width="30px"></td><td width="30px"><img src="docs/imgs/flag_dem.png" width="25"/></td><td width="25px"><img src="docs/imgs/ling.svg" width="20px"/></td><td width="20px">1</td><td><b><code>parent_node_id</code></b>: parent node of the head node</td></tr>
-<tr><td width="30px"></td><td width="30px"><img src="docs/imgs/flag_dem.png" width="25"/></td><td width="25px"><img src="docs/imgs/ling.svg" width="20px"/></td><td width="20px">1</td><td><b><code>grandparent_node_id</code></b>: grand parent node of the head node</td></tr>
+<tr><td width="56px"></td><td width="56px"><img src="docs/imgs/flag_dem.png" width="25"/></td><td width="45px"><img src="docs/imgs/ling.svg" width="20px"/></td><td width="20px">1</td><td><b><code>node_id</code></b>: head node id (this id is not referenced elsewhere in the database, it is an arbitrary number used only for the two next fields)</td></tr>
+<tr><td width="56px"></td><td width="56px"><img src="docs/imgs/flag_dem.png" width="25"/></td><td width="45px"><img src="docs/imgs/ling.svg" width="20px"/></td><td width="20px">1</td><td><b><code>parent_node_id</code></b>: parent node of the head node</td></tr>
+<tr><td width="56px"></td><td width="56px"><img src="docs/imgs/flag_dem.png" width="25"/></td><td width="45px"><img src="docs/imgs/ling.svg" width="20px"/></td><td width="20px">1</td><td><b><code>grandparent_node_id</code></b>: grand parent node of the head node</td></tr>
 </table>
 
 Named entity:
 
 <table width="100%" class="features">
-<tr><td width="30px"><img src="docs/imgs/flag_conll.png" width="25"/></td><td width="30px"><img src="docs/imgs/flag_dem.png" width="25"/></td><td width="25px"><img src="docs/imgs/ling.svg" width="20px"/></td><td width="20px">1</td><td><b><code>named_entity_type</code></b>: types vary according to the corpora (18 types for CoNLL, 4 types for Democrat/Ancor, see the complete list of values)</td></tr>
-<tr><td width="30px"><img src="docs/imgs/flag_conll.png" width="25"/></td><td width="30px"><img src="docs/imgs/flag_dem.png" width="25"/></td><td width="25px"><img src="docs/imgs/ling.svg" width="20px"/></td><td width="20px">1</td><td><b><code>is_named_entity</code></b>: whether the mention is a named entity</td></tr>
-<tr><td width="30px"><img src="docs/imgs/flag_conll.png" width="25"/></td><td width="30px"></td><td width="25px"><img src="docs/imgs/ling.svg" width="20px"/></td><td width="20px">1</td><td><b><code>is_name</code></b>: whether the mention is a named entity is of one of the types PERSON, FACILITY, ORG, GPE, WORK OF ART, NORP, LOCATION, PRODUCT, EVENT, LAW, LANGUAGE</td></tr>
-<tr><td width="30px"></td><td width="30px"><img src="docs/imgs/flag_dem.png" width="25"/></td><td width="25px"><img src="docs/imgs/ling.svg" width="20px"/></td><td width="20px">1</td><td><b><code>is_pers</code></b>: whether the mention is a named entity is of one of the type PERS</td></tr>
+<tr><td width="56px"><img src="docs/imgs/flag_conll.png" width="25"/></td><td width="56px"><img src="docs/imgs/flag_dem.png" width="25"/></td><td width="45px"><img src="docs/imgs/ling.svg" width="20px"/></td><td width="20px">1</td><td><b><code>named_entity_type</code></b>: types vary according to the corpora (18 types for CoNLL, 4 types for Democrat/Ancor, see the complete list of values)</td></tr>
+<tr><td width="56px"><img src="docs/imgs/flag_conll.png" width="25"/></td><td width="56px"><img src="docs/imgs/flag_dem.png" width="25"/></td><td width="45px"><img src="docs/imgs/ling.svg" width="20px"/></td><td width="20px">1</td><td><b><code>is_named_entity</code></b>: whether the mention is a named entity</td></tr>
+<tr><td width="56px"><img src="docs/imgs/flag_conll.png" width="25"/></td><td width="56px"></td><td width="45px"><img src="docs/imgs/ling.svg" width="20px"/></td><td width="20px">1</td><td><b><code>is_name</code></b>: whether the mention is a named entity is of one of the types PERSON, FACILITY, ORG, GPE, WORK OF ART, NORP, LOCATION, PRODUCT, EVENT, LAW, LANGUAGE</td></tr>
+<tr><td width="56px"></td><td width="56px"><img src="docs/imgs/flag_dem.png" width="25"/></td><td width="45px"><img src="docs/imgs/ling.svg" width="20px"/></td><td width="20px">1</td><td><b><code>is_pers</code></b>: whether the mention is a named entity is of one of the type PERS</td></tr>
 </table>
 
 Speaker:
 
 <table width="100%" class="features">
-<tr><td width="30px"><img src="docs/imgs/flag_conll.png" width="25"/></td><td width="30px"><img src="docs/imgs/flag_dem.png" width="25"/></td><td width="25px"><img src="docs/imgs/ling.svg" width="20px"/></td><td width="20px">1</td><td><b><code>speaker</code></b>: for CoNLL and Ancor (dummy value for Democrat)</td></tr>
+<tr><td width="56px"><img src="docs/imgs/flag_conll.png" width="25"/></td><td width="56px"><img src="docs/imgs/flag_dem.png" width="25"/></td><td width="45px"><img src="docs/imgs/ling.svg" width="20px"/></td><td width="20px">1</td><td><b><code>speaker</code></b>: for CoNLL and Ancor (dummy value for Democrat)</td></tr>
 </table>
 
 Type of the mention:
 
 <table width="100%" class="features">
-<tr><td width="30px"><img src="docs/imgs/flag_conll.png" width="25"/></td><td width="30px"><img src="docs/imgs/flag_dem.png" width="25"/></td><td width="25px"><img src="docs/imgs/ling.svg" width="20px"/></td><td width="20px">1</td><td><b><code>is_clause</code></b></td></tr>
-<tr><td width="30px"><img src="docs/imgs/flag_conll.png" width="25"/></td><td width="30px"></td><td width="25px"><img src="docs/imgs/ling.svg" width="20px"/></td><td width="20px">1</td><td><b><code>is_phrase</code></b></td></tr>
-<tr><td width="30px"><img src="docs/imgs/flag_conll.png" width="25"/></td><td width="30px"></td><td width="25px"><img src="docs/imgs/ling.svg" width="20px"/></td><td width="20px">1</td><td><b><code>is_word</code></b></td></tr>
+<tr><td width="56px"><img src="docs/imgs/flag_conll.png" width="25"/></td><td width="56px"><img src="docs/imgs/flag_dem.png" width="25"/></td><td width="45px"><img src="docs/imgs/ling.svg" width="20px"/></td><td width="20px">1</td><td><b><code>is_clause</code></b></td></tr>
+<tr><td width="56px"><img src="docs/imgs/flag_conll.png" width="25"/></td><td width="56px"></td><td width="45px"><img src="docs/imgs/ling.svg" width="20px"/></td><td width="20px">1</td><td><b><code>is_phrase</code></b></td></tr>
+<tr><td width="56px"><img src="docs/imgs/flag_conll.png" width="25"/></td><td width="56px"></td><td width="45px"><img src="docs/imgs/ling.svg" width="20px"/></td><td width="20px">1</td><td><b><code>is_word</code></b></td></tr>
 </table>
 
 Morphosyntax:
 
 <table width="100%" class="features">
-<tr><td width="30px"><img src="docs/imgs/flag_conll.png" width="25"/></td><td width="30px"></td><td width="25px"><img src="docs/imgs/ling.svg" width="20px"/></td><td width="20px">1</td><td><b><code>tag</code></b></td></tr>
-<tr><td width="30px"><img src="docs/imgs/flag_conll.png" width="25"/></td><td width="30px"></td><td width="25px"><img src="docs/imgs/ling.svg" width="20px"/></td><td width="20px">1</td><td><b><code>pspeech</code></b>: alias for tag</td></tr>
-<tr><td width="30px"></td><td width="30px"><img src="docs/imgs/flag_dem.png" width="25"/></td><td width="25px"><img src="docs/imgs/ling.svg" width="20px"/></td><td width="20px">1</td><td><b><code>pos</code></b></td></tr>
-<tr><td width="30px"></td><td width="30px"><img src="docs/imgs/flag_dem.png" width="25"/></td><td width="25px"><img src="docs/imgs/ling.svg" width="20px"/></td><td width="20px">1</td><td><b><code>deplabel</code></b></td></tr>
-<tr><td width="30px"></td><td width="30px"><img src="docs/imgs/flag_dem.png" width="25"/></td><td width="25px"><img src="docs/imgs/ling.svg" width="20px"/></td><td width="20px">1</td><td><b><code>subdeplabel</code></b></td></tr>
+<tr><td width="56px"><img src="docs/imgs/flag_conll.png" width="25"/></td><td width="56px"></td><td width="45px"><img src="docs/imgs/ling.svg" width="20px"/></td><td width="20px">1</td><td><b><code>tag</code></b></td></tr>
+<tr><td width="56px"><img src="docs/imgs/flag_conll.png" width="25"/></td><td width="56px"></td><td width="45px"><img src="docs/imgs/ling.svg" width="20px"/></td><td width="20px">1</td><td><b><code>pspeech</code></b>: alias for tag</td></tr>
+<tr><td width="56px"></td><td width="56px"><img src="docs/imgs/flag_dem.png" width="25"/></td><td width="45px"><img src="docs/imgs/ling.svg" width="20px"/></td><td width="20px">1</td><td><b><code>pos</code></b></td></tr>
+<tr><td width="56px"></td><td width="56px"><img src="docs/imgs/flag_dem.png" width="25"/></td><td width="45px"><img src="docs/imgs/ling.svg" width="20px"/></td><td width="20px">1</td><td><b><code>deplabel</code></b></td></tr>
+<tr><td width="56px"></td><td width="56px"><img src="docs/imgs/flag_dem.png" width="25"/></td><td width="45px"><img src="docs/imgs/ling.svg" width="20px"/></td><td width="20px">1</td><td><b><code>subdeplabel</code></b></td></tr>
 </table>
 
 Categories (according to UD):
 
 <table width="100%" class="features">
-<tr><td width="30px"></td><td width="30px"><img src="docs/imgs/flag_dem.png" width="25"/></td><td width="25px"><img src="docs/imgs/ling.svg" width="20px"/></td><td width="20px">1</td><td><b><code>is_relative_pronoun</code></b></td></tr>
-<tr><td width="30px"></td><td width="30px"><img src="docs/imgs/flag_dem.png" width="25"/></td><td width="25px"><img src="docs/imgs/ling.svg" width="20px"/></td><td width="20px">1</td><td><b><code>is_reciprocal</code></b></td></tr>
-<tr><td width="30px"></td><td width="30px"><img src="docs/imgs/flag_dem.png" width="25"/></td><td width="25px"><img src="docs/imgs/ling.svg" width="20px"/></td><td width="20px">1</td><td><b><code>is_reflexive</code></b></td></tr>
-<tr><td width="30px"></td><td width="30px"><img src="docs/imgs/flag_dem.png" width="25"/></td><td width="25px"><img src="docs/imgs/ling.svg" width="20px"/></td><td width="20px">1</td><td><b><code>is_expletive</code></b></td></tr>
-<tr><td width="30px"></td><td width="30px"><img src="docs/imgs/flag_dem.png" width="25"/></td><td width="25px"><img src="docs/imgs/ling.svg" width="20px"/></td><td width="20px">1</td><td><b><code>is_complement</code></b></td></tr>
-<tr><td width="30px"></td><td width="30px"><img src="docs/imgs/flag_dem.png" width="25"/></td><td width="25px"><img src="docs/imgs/ling.svg" width="20px"/></td><td width="20px">1</td><td><b><code>is_apposition</code></b></td></tr>
-<tr><td width="30px"></td><td width="30px"><img src="docs/imgs/flag_dem.png" width="25"/></td><td width="25px"><img src="docs/imgs/ling.svg" width="20px"/></td><td width="20px">1</td><td><b><code>is_verb</code></b></td></tr>
-<tr><td width="30px"></td><td width="30px"><img src="docs/imgs/flag_dem.png" width="25"/></td><td width="25px"><img src="docs/imgs/ling.svg" width="20px"/></td><td width="20px">1</td><td><b><code>is_verb_without_subject</code></b></td></tr>
+<tr><td width="56px"></td><td width="56px"><img src="docs/imgs/flag_dem.png" width="25"/></td><td width="45px"><img src="docs/imgs/ling.svg" width="20px"/></td><td width="20px">1</td><td><b><code>is_relative_pronoun</code></b></td></tr>
+<tr><td width="56px"></td><td width="56px"><img src="docs/imgs/flag_dem.png" width="25"/></td><td width="45px"><img src="docs/imgs/ling.svg" width="20px"/></td><td width="20px">1</td><td><b><code>is_reciprocal</code></b></td></tr>
+<tr><td width="56px"></td><td width="56px"><img src="docs/imgs/flag_dem.png" width="25"/></td><td width="45px"><img src="docs/imgs/ling.svg" width="20px"/></td><td width="20px">1</td><td><b><code>is_reflexive</code></b></td></tr>
+<tr><td width="56px"></td><td width="56px"><img src="docs/imgs/flag_dem.png" width="25"/></td><td width="45px"><img src="docs/imgs/ling.svg" width="20px"/></td><td width="20px">1</td><td><b><code>is_expletive</code></b></td></tr>
+<tr><td width="56px"></td><td width="56px"><img src="docs/imgs/flag_dem.png" width="25"/></td><td width="45px"><img src="docs/imgs/ling.svg" width="20px"/></td><td width="20px">1</td><td><b><code>is_complement</code></b></td></tr>
+<tr><td width="56px"></td><td width="56px"><img src="docs/imgs/flag_dem.png" width="25"/></td><td width="45px"><img src="docs/imgs/ling.svg" width="20px"/></td><td width="20px">1</td><td><b><code>is_apposition</code></b></td></tr>
+<tr><td width="56px"></td><td width="56px"><img src="docs/imgs/flag_dem.png" width="25"/></td><td width="45px"><img src="docs/imgs/ling.svg" width="20px"/></td><td width="20px">1</td><td><b><code>is_verb</code></b></td></tr>
+<tr><td width="56px"></td><td width="56px"><img src="docs/imgs/flag_dem.png" width="25"/></td><td width="45px"><img src="docs/imgs/ling.svg" width="20px"/></td><td width="20px">1</td><td><b><code>is_verb_without_subject</code></b></td></tr>
 </table>
 
 Morphosyntax and syntax of the parent:
 
 <table width="100%" class="features">
-<tr><td width="30px"><img src="docs/imgs/flag_conll.png" width="25"/></td><td width="30px"></td><td width="25px"><img src="docs/imgs/ling.svg" width="20px"/></td><td width="20px">1</td><td><b><code>parent_phrase_tag</code></b></td></tr>
-<tr><td width="30px"></td><td width="30px"><img src="docs/imgs/flag_dem.png" width="25"/></td><td width="25px"><img src="docs/imgs/ling.svg" width="20px"/></td><td width="20px">1</td><td><b><code>parent_pos</code></b></td></tr>
-<tr><td width="30px"></td><td width="30px"><img src="docs/imgs/flag_dem.png" width="25"/></td><td width="25px"><img src="docs/imgs/ling.svg" width="20px"/></td><td width="20px">1</td><td><b><code>parent_deplabel</code></b></td></tr>
-<tr><td width="30px"></td><td width="30px"><img src="docs/imgs/flag_dem.png" width="25"/></td><td width="25px"><img src="docs/imgs/ling.svg" width="20px"/></td><td width="20px">1</td><td><b><code>parent_subdeplabel</code></b></td></tr>
-<tr><td width="30px"><img src="docs/imgs/flag_conll.png" width="25"/></td><td width="30px"></td><td width="25px"><img src="docs/imgs/ling.svg" width="20px"/></td><td width="20px">1</td><td><b><code>parent_clause_tag</code></b></td></tr>
-<tr><td width="30px"></td><td width="30px"><img src="docs/imgs/flag_dem.png" width="25"/></td><td width="25px"><img src="docs/imgs/ling.svg" width="20px"/></td><td width="20px">1</td><td><b><code>parent_clause_pos</code></b></td></tr>
-<tr><td width="30px"></td><td width="30px"><img src="docs/imgs/flag_dem.png" width="25"/></td><td width="25px"><img src="docs/imgs/ling.svg" width="20px"/></td><td width="20px">1</td><td><b><code>parent_clause_deplabel</code></b></td></tr>
-<tr><td width="30px"></td><td width="30px"><img src="docs/imgs/flag_dem.png" width="25"/></td><td width="25px"><img src="docs/imgs/ling.svg" width="20px"/></td><td width="20px">1</td><td><b><code>parent_clause_subdeplabel</code></b></td></tr>
-<tr><td width="30px"><img src="docs/imgs/flag_conll.png" width="25"/></td><td width="30px"></td><td width="25px"><img src="docs/imgs/ling.svg" width="20px"/></td><td width="20px">1</td><td><b><code>parent_phrase_id</code></b></td></tr>
-<tr><td width="30px"><img src="docs/imgs/flag_conll.png" width="25"/></td><td width="30px"><img src="docs/imgs/flag_dem.png" width="25"/></td><td width="25px"><img src="docs/imgs/ling.svg" width="20px"/></td><td width="20px">1</td><td><b><code>parent_clause_id</code></b></td></tr>
+<tr><td width="56px"><img src="docs/imgs/flag_conll.png" width="25"/></td><td width="56px"></td><td width="45px"><img src="docs/imgs/ling.svg" width="20px"/></td><td width="20px">1</td><td><b><code>parent_phrase_tag</code></b></td></tr>
+<tr><td width="56px"></td><td width="56px"><img src="docs/imgs/flag_dem.png" width="25"/></td><td width="45px"><img src="docs/imgs/ling.svg" width="20px"/></td><td width="20px">1</td><td><b><code>parent_pos</code></b></td></tr>
+<tr><td width="56px"></td><td width="56px"><img src="docs/imgs/flag_dem.png" width="25"/></td><td width="45px"><img src="docs/imgs/ling.svg" width="20px"/></td><td width="20px">1</td><td><b><code>parent_deplabel</code></b></td></tr>
+<tr><td width="56px"></td><td width="56px"><img src="docs/imgs/flag_dem.png" width="25"/></td><td width="45px"><img src="docs/imgs/ling.svg" width="20px"/></td><td width="20px">1</td><td><b><code>parent_subdeplabel</code></b></td></tr>
+<tr><td width="56px"><img src="docs/imgs/flag_conll.png" width="25"/></td><td width="56px"></td><td width="45px"><img src="docs/imgs/ling.svg" width="20px"/></td><td width="20px">1</td><td><b><code>parent_clause_tag</code></b></td></tr>
+<tr><td width="56px"></td><td width="56px"><img src="docs/imgs/flag_dem.png" width="25"/></td><td width="45px"><img src="docs/imgs/ling.svg" width="20px"/></td><td width="20px">1</td><td><b><code>parent_clause_pos</code></b></td></tr>
+<tr><td width="56px"></td><td width="56px"><img src="docs/imgs/flag_dem.png" width="25"/></td><td width="45px"><img src="docs/imgs/ling.svg" width="20px"/></td><td width="20px">1</td><td><b><code>parent_clause_deplabel</code></b></td></tr>
+<tr><td width="56px"></td><td width="56px"><img src="docs/imgs/flag_dem.png" width="25"/></td><td width="45px"><img src="docs/imgs/ling.svg" width="20px"/></td><td width="20px">1</td><td><b><code>parent_clause_subdeplabel</code></b></td></tr>
+<tr><td width="56px"><img src="docs/imgs/flag_conll.png" width="25"/></td><td width="56px"></td><td width="45px"><img src="docs/imgs/ling.svg" width="20px"/></td><td width="20px">1</td><td><b><code>parent_phrase_id</code></b></td></tr>
+<tr><td width="56px"><img src="docs/imgs/flag_conll.png" width="25"/></td><td width="56px"><img src="docs/imgs/flag_dem.png" width="25"/></td><td width="45px"><img src="docs/imgs/ling.svg" width="20px"/></td><td width="20px">1</td><td><b><code>parent_clause_id</code></b></td></tr>
 </table>
 
 Function:
 
 <table width="100%" class="features">
-<tr><td width="30px"></td><td width="30px"><img src="docs/imgs/flag_dem.png" width="25"/></td><td width="25px"><img src="docs/imgs/ling.svg" width="20px"/></td><td width="20px">1</td><td><b><code>is_subject</code></b></td></tr>
-<tr><td width="30px"></td><td width="30px"><img src="docs/imgs/flag_dem.png" width="25"/></td><td width="25px"><img src="docs/imgs/ling.svg" width="20px"/></td><td width="20px">1</td><td><b><code>is_object</code></b></td></tr>
-<tr><td width="30px"></td><td width="30px"><img src="docs/imgs/flag_dem.png" width="25"/></td><td width="25px"><img src="docs/imgs/ling.svg" width="20px"/></td><td width="20px">1</td><td><b><code>is_non_core</code>: neither subject nor object</b></td></tr>
+<tr><td width="56px"></td><td width="56px"><img src="docs/imgs/flag_dem.png" width="25"/></td><td width="45px"><img src="docs/imgs/ling.svg" width="20px"/></td><td width="20px">1</td><td><b><code>is_subject</code></b></td></tr>
+<tr><td width="56px"></td><td width="56px"><img src="docs/imgs/flag_dem.png" width="25"/></td><td width="45px"><img src="docs/imgs/ling.svg" width="20px"/></td><td width="20px">1</td><td><b><code>is_object</code></b></td></tr>
+<tr><td width="56px"></td><td width="56px"><img src="docs/imgs/flag_dem.png" width="25"/></td><td width="45px"><img src="docs/imgs/ling.svg" width="20px"/></td><td width="20px">1</td><td><b><code>is_non_core</code>: neither subject nor object</b></td></tr>
 </table>
 
 Preposition:
 
 <table width="100%" class="features">
-<tr><td width="30px"><img src="docs/imgs/flag_conll.png" width="25"/></td><td width="30px"><img src="docs/imgs/flag_dem.png" width="25"/></td><td width="25px"><img src="docs/imgs/ling.svg" width="20px"/></td><td width="20px">1</td><td><b><code>in_pp</code></b>: whether the mention is in a prepositional phrase</td></tr>
-<tr><td width="30px"><img src="docs/imgs/flag_conll.png" width="25"/></td><td width="30px"><img src="docs/imgs/flag_dem.png" width="25"/></td><td width="25px"><img src="docs/imgs/ling.svg" width="20px"/></td><td width="20px">1</td><td><b><code>preposition</code></b>: the text of the preposition</td></tr>
+<tr><td width="56px"><img src="docs/imgs/flag_conll.png" width="25"/></td><td width="56px"><img src="docs/imgs/flag_dem.png" width="25"/></td><td width="45px"><img src="docs/imgs/ling.svg" width="20px"/></td><td width="20px">1</td><td><b><code>in_pp</code></b>: whether the mention is in a prepositional phrase</td></tr>
+<tr><td width="56px"><img src="docs/imgs/flag_conll.png" width="25"/></td><td width="56px"><img src="docs/imgs/flag_dem.png" width="25"/></td><td width="45px"><img src="docs/imgs/ling.svg" width="20px"/></td><td width="20px">1</td><td><b><code>preposition</code></b>: the text of the preposition</td></tr>
 </table>
 
 Syntactic depth of the head node (for Democrat/Ancor) or of the constituent (for CoNLL):
 
 <table width="100%" class="features">
-<tr><td width="30px"><img src="docs/imgs/flag_conll.png" width="25"/></td><td width="30px"><img src="docs/imgs/flag_dem.png" width="25"/></td><td width="25px"><img src="docs/imgs/ling.svg" width="20px"/></td><td width="20px">1</td><td><b><code>node_depth</code></b></td></tr>
-<tr><td width="30px"><img src="docs/imgs/flag_conll.png" width="25"/></td><td width="30px"><img src="docs/imgs/flag_dem.png" width="25"/></td><td width="25px"><img src="docs/imgs/ling.svg" width="20px"/></td><td width="20px">1</td><td><b><code>clause_depth</code></b></td></tr>
-<tr><td width="30px"><img src="docs/imgs/flag_conll.png" width="25"/></td><td width="30px"></td><td width="25px"><img src="docs/imgs/ling.svg" width="20px"/></td><td width="20px">1</td><td><b><code>phrase_depth</code></b></td></tr>
+<tr><td width="56px"><img src="docs/imgs/flag_conll.png" width="25"/></td><td width="56px"><img src="docs/imgs/flag_dem.png" width="25"/></td><td width="45px"><img src="docs/imgs/ling.svg" width="20px"/></td><td width="20px">1</td><td><b><code>node_depth</code></b></td></tr>
+<tr><td width="56px"><img src="docs/imgs/flag_conll.png" width="25"/></td><td width="56px"><img src="docs/imgs/flag_dem.png" width="25"/></td><td width="45px"><img src="docs/imgs/ling.svg" width="20px"/></td><td width="20px">1</td><td><b><code>clause_depth</code></b></td></tr>
+<tr><td width="56px"><img src="docs/imgs/flag_conll.png" width="25"/></td><td width="56px"></td><td width="45px"><img src="docs/imgs/ling.svg" width="20px"/></td><td width="20px">1</td><td><b><code>phrase_depth</code></b></td></tr>
 </table>
 
 Type of clauses:
 
 <table width="100%" class="features">
-<tr><td width="30px"><img src="docs/imgs/flag_conll.png" width="25"/></td><td width="30px"><img src="docs/imgs/flag_dem.png" width="25"/></td><td width="25px"><img src="docs/imgs/ling.svg" width="20px"/></td><td width="20px">1</td><td><b><code>is_in_main_clause</code></b></td></tr>
-<tr><td width="30px"><img src="docs/imgs/flag_conll.png" width="25"/></td><td width="30px"><img src="docs/imgs/flag_dem.png" width="25"/></td><td width="25px"><img src="docs/imgs/ling.svg" width="20px"/></td><td width="20px">1</td><td><b><code>is_in_matrix</code></b></td></tr>
-<tr><td width="30px"><img src="docs/imgs/flag_conll.png" width="25"/></td><td width="30px"></td><td width="25px"><img src="docs/imgs/ling.svg" width="20px"/></td><td width="20px">1</td><td><b><code>is_embedded</code></b></td></tr>
-<tr><td width="30px"><img src="docs/imgs/flag_conll.png" width="25"/></td><td width="30px"><img src="docs/imgs/flag_dem.png" width="25"/></td><td width="25px"><img src="docs/imgs/ling.svg" width="20px"/></td><td width="20px">1</td><td><b><code>is_in_embedded</code></b></td></tr>
+<tr><td width="56px"><img src="docs/imgs/flag_conll.png" width="25"/></td><td width="56px"><img src="docs/imgs/flag_dem.png" width="25"/></td><td width="45px"><img src="docs/imgs/ling.svg" width="20px"/></td><td width="20px">1</td><td><b><code>is_in_main_clause</code></b></td></tr>
+<tr><td width="56px"><img src="docs/imgs/flag_conll.png" width="25"/></td><td width="56px"><img src="docs/imgs/flag_dem.png" width="25"/></td><td width="45px"><img src="docs/imgs/ling.svg" width="20px"/></td><td width="20px">1</td><td><b><code>is_in_matrix</code></b></td></tr>
+<tr><td width="56px"><img src="docs/imgs/flag_conll.png" width="25"/></td><td width="56px"></td><td width="45px"><img src="docs/imgs/ling.svg" width="20px"/></td><td width="20px">1</td><td><b><code>is_embedded</code></b></td></tr>
+<tr><td width="56px"><img src="docs/imgs/flag_conll.png" width="25"/></td><td width="56px"><img src="docs/imgs/flag_dem.png" width="25"/></td><td width="45px"><img src="docs/imgs/ling.svg" width="20px"/></td><td width="20px">1</td><td><b><code>is_in_embedded</code></b></td></tr>
 </table>
 
 Dependents:
 
 <table width="100%" class="features">
-<tr><td width="30px"><img src="docs/imgs/flag_conll.png" width="25"/></td><td width="30px"><img src="docs/imgs/flag_dem.png" width="25"/></td><td width="25px"><img src="docs/imgs/ling.svg" width="20px"/></td><td width="20px">1</td><td><b><code>dependent_count</code></b></td></tr>
-<tr><td width="30px"><img src="docs/imgs/flag_conll.png" width="25"/></td><td width="30px"><img src="docs/imgs/flag_dem.png" width="25"/></td><td width="25px"><img src="docs/imgs/ling.svg" width="20px"/></td><td width="20px">1</td><td><b><code>predependent_count</code></b></td></tr>
-<tr><td width="30px"><img src="docs/imgs/flag_conll.png" width="25"/></td><td width="30px"><img src="docs/imgs/flag_dem.png" width="25"/></td><td width="25px"><img src="docs/imgs/ling.svg" width="20px"/></td><td width="20px">1</td><td><b><code>postdependent_count</code></b></td></tr>
-<tr><td width="30px"><img src="docs/imgs/flag_conll.png" width="25"/></td><td width="30px"><img src="docs/imgs/flag_dem.png" width="25"/></td><td width="25px"><img src="docs/imgs/ling.svg" width="20px"/></td><td width="20px">1</td><td><b><code>adjective_dependent_counter</code></b></td></tr>
-<tr><td width="30px"><img src="docs/imgs/flag_conll.png" width="25"/></td><td width="30px"><img src="docs/imgs/flag_dem.png" width="25"/></td><td width="25px"><img src="docs/imgs/ling.svg" width="20px"/></td><td width="20px">1</td><td><b><code>noun_dependent_counter</code></b></td></tr>
-<tr><td width="30px"><img src="docs/imgs/flag_conll.png" width="25"/></td><td width="30px"><img src="docs/imgs/flag_dem.png" width="25"/></td><td width="25px"><img src="docs/imgs/ling.svg" width="20px"/></td><td width="20px">1</td><td><b><code>clause_dependent_counter</code></b></td></tr>
-<tr><td width="30px"><img src="docs/imgs/flag_conll.png" width="25"/></td><td width="30px"></td><td width="25px"><img src="docs/imgs/ling.svg" width="20px"/></td><td width="20px">1</td><td><b><code>phrase_dependent_counter</code></b></td></tr>
-<tr><td width="30px"><img src="docs/imgs/flag_conll.png" width="25"/></td><td width="30px"></td><td width="25px"><img src="docs/imgs/ling.svg" width="20px"/></td><td width="20px">1</td><td><b><code>other_dependent_counter</code></b></td></tr>
-<tr><td width="30px"></td><td width="30px"><img src="docs/imgs/flag_dem.png" width="25"/></td><td width="25px"><img src="docs/imgs/ling.svg" width="20px"/></td><td width="20px">1</td><td><b><code>num_dependent_counter</code></b></td></tr>
-<tr><td width="30px"></td><td width="30px"><img src="docs/imgs/flag_dem.png" width="25"/></td><td width="25px"><img src="docs/imgs/ling.svg" width="20px"/></td><td width="20px">1</td><td><b><code>appos_dependent_counter</code></b></td></tr>
-<tr><td width="30px"></td><td width="30px"><img src="docs/imgs/flag_dem.png" width="25"/></td><td width="25px"><img src="docs/imgs/ling.svg" width="20px"/></td><td width="20px">1</td><td><b><code>is_dependent</code></b></td></tr>
-<tr><td width="30px"></td><td width="30px"><img src="docs/imgs/flag_dem.png" width="25"/></td><td width="25px"><img src="docs/imgs/ling.svg" width="20px"/></td><td width="20px">1</td><td><b><code>dependent_type</code></b></td></tr>
+<tr><td width="56px"><img src="docs/imgs/flag_conll.png" width="25"/></td><td width="56px"><img src="docs/imgs/flag_dem.png" width="25"/></td><td width="45px"><img src="docs/imgs/ling.svg" width="20px"/></td><td width="20px">1</td><td><b><code>dependent_count</code></b></td></tr>
+<tr><td width="56px"><img src="docs/imgs/flag_conll.png" width="25"/></td><td width="56px"><img src="docs/imgs/flag_dem.png" width="25"/></td><td width="45px"><img src="docs/imgs/ling.svg" width="20px"/></td><td width="20px">1</td><td><b><code>predependent_count</code></b></td></tr>
+<tr><td width="56px"><img src="docs/imgs/flag_conll.png" width="25"/></td><td width="56px"><img src="docs/imgs/flag_dem.png" width="25"/></td><td width="45px"><img src="docs/imgs/ling.svg" width="20px"/></td><td width="20px">1</td><td><b><code>postdependent_count</code></b></td></tr>
+<tr><td width="56px"><img src="docs/imgs/flag_conll.png" width="25"/></td><td width="56px"><img src="docs/imgs/flag_dem.png" width="25"/></td><td width="45px"><img src="docs/imgs/ling.svg" width="20px"/></td><td width="20px">1</td><td><b><code>adjective_dependent_counter</code></b></td></tr>
+<tr><td width="56px"><img src="docs/imgs/flag_conll.png" width="25"/></td><td width="56px"><img src="docs/imgs/flag_dem.png" width="25"/></td><td width="45px"><img src="docs/imgs/ling.svg" width="20px"/></td><td width="20px">1</td><td><b><code>noun_dependent_counter</code></b></td></tr>
+<tr><td width="56px"><img src="docs/imgs/flag_conll.png" width="25"/></td><td width="56px"><img src="docs/imgs/flag_dem.png" width="25"/></td><td width="45px"><img src="docs/imgs/ling.svg" width="20px"/></td><td width="20px">1</td><td><b><code>clause_dependent_counter</code></b></td></tr>
+<tr><td width="56px"><img src="docs/imgs/flag_conll.png" width="25"/></td><td width="56px"></td><td width="45px"><img src="docs/imgs/ling.svg" width="20px"/></td><td width="20px">1</td><td><b><code>phrase_dependent_counter</code></b></td></tr>
+<tr><td width="56px"><img src="docs/imgs/flag_conll.png" width="25"/></td><td width="56px"></td><td width="45px"><img src="docs/imgs/ling.svg" width="20px"/></td><td width="20px">1</td><td><b><code>other_dependent_counter</code></b></td></tr>
+<tr><td width="56px"></td><td width="56px"><img src="docs/imgs/flag_dem.png" width="25"/></td><td width="45px"><img src="docs/imgs/ling.svg" width="20px"/></td><td width="20px">1</td><td><b><code>num_dependent_counter</code></b></td></tr>
+<tr><td width="56px"></td><td width="56px"><img src="docs/imgs/flag_dem.png" width="25"/></td><td width="45px"><img src="docs/imgs/ling.svg" width="20px"/></td><td width="20px">1</td><td><b><code>appos_dependent_counter</code></b></td></tr>
+<tr><td width="56px"></td><td width="56px"><img src="docs/imgs/flag_dem.png" width="25"/></td><td width="45px"><img src="docs/imgs/ling.svg" width="20px"/></td><td width="20px">1</td><td><b><code>is_dependent</code></b></td></tr>
+<tr><td width="56px"></td><td width="56px"><img src="docs/imgs/flag_dem.png" width="25"/></td><td width="45px"><img src="docs/imgs/ling.svg" width="20px"/></td><td width="20px">1</td><td><b><code>dependent_type</code></b></td></tr>
 </table>
 
 Determiner:
 
 <table width="100%" class="features">
-<tr><td width="30px"><img src="docs/imgs/flag_conll.png" width="25"/></td><td width="30px"><img src="docs/imgs/flag_dem.png" width="25"/></td><td width="25px"><img src="docs/imgs/ling.svg" width="20px"/></td><td width="20px">1</td><td><b><code>determiner_string</code></b></td></tr>
-<tr><td width="30px"><img src="docs/imgs/flag_conll.png" width="25"/></td><td width="30px"><img src="docs/imgs/flag_dem.png" width="25"/></td><td width="25px"><img src="docs/imgs/ling.svg" width="20px"/></td><td width="20px">1</td><td><b><code>determiner_head_string</code></b></td></tr>
-<tr><td width="30px"></td><td width="30px"><img src="docs/imgs/flag_dem.png" width="25"/></td><td width="25px"><img src="docs/imgs/ling.svg" width="20px"/></td><td width="20px">1</td><td><b><code>determiner_head_lemma</code></b></td></tr>
-<tr><td width="30px"><img src="docs/imgs/flag_conll.png" width="25"/></td><td width="30px"></td><td width="25px"><img src="docs/imgs/ling.svg" width="20px"/></td><td width="20px">1</td><td><b><code>determiner_type</code></b></td></tr>
-<tr><td width="30px"><img src="docs/imgs/flag_conll.png" width="25"/></td><td width="30px"></td><td width="25px"><img src="docs/imgs/ling.svg" width="20px"/></td><td width="20px">1</td><td><b><code>has_bare_determiner</code></b></td></tr>
-<tr><td width="30px"><img src="docs/imgs/flag_conll.png" width="25"/></td><td width="30px"><img src="docs/imgs/flag_dem.png" width="25"/></td><td width="25px"><img src="docs/imgs/ling.svg" width="20px"/></td><td width="20px">1</td><td><b><code>has_genetive_determiner</code></b></td></tr>
-<tr><td width="30px"><img src="docs/imgs/flag_conll.png" width="25"/></td><td width="30px"><img src="docs/imgs/flag_dem.png" width="25"/></td><td width="25px"><img src="docs/imgs/ling.svg" width="20px"/></td><td width="20px">1</td><td><b><code>has_complex_determiner</code></b></td></tr>
-<tr><td width="30px"></td><td width="30px"><img src="docs/imgs/flag_dem.png" width="25"/></td><td width="25px"><img src="docs/imgs/ling.svg" width="20px"/></td><td width="20px">1</td><td><b><code>is_determiner</code></b></td></tr>
-<tr><td width="30px"><img src="docs/imgs/flag_conll.png" width="25"/></td><td width="30px"></td><td width="25px"><img src="docs/imgs/ling.svg" width="20px"/></td><td width="20px">1</td><td><b><code>is_possessive</code></b></td></tr>
-<tr><td width="30px"></td><td width="30px"><img src="docs/imgs/flag_dem.png" width="25"/></td><td width="25px"><img src="docs/imgs/ling.svg" width="20px"/></td><td width="20px">1</td><td><b><code>is_possessive_determiner</code></b></td></tr>
-<tr><td width="30px"><img src="docs/imgs/flag_conll.png" width="25"/></td><td width="30px"></td><td width="25px"><img src="docs/imgs/ling.svg" width="20px"/></td><td width="20px">1</td><td><b><code>is_genitive</code></b></td></tr>
-<tr><td width="30px"></td><td width="30px"><img src="docs/imgs/flag_dem.png" width="25"/></td><td width="25px"><img src="docs/imgs/ling.svg" width="20px"/></td><td width="20px">1</td><td><b><code>is_genitive_determiner</code></b></td></tr>
+<tr><td width="56px"><img src="docs/imgs/flag_conll.png" width="25"/></td><td width="56px"><img src="docs/imgs/flag_dem.png" width="25"/></td><td width="45px"><img src="docs/imgs/ling.svg" width="20px"/></td><td width="20px">1</td><td><b><code>determiner_string</code></b></td></tr>
+<tr><td width="56px"><img src="docs/imgs/flag_conll.png" width="25"/></td><td width="56px"><img src="docs/imgs/flag_dem.png" width="25"/></td><td width="45px"><img src="docs/imgs/ling.svg" width="20px"/></td><td width="20px">1</td><td><b><code>determiner_head_string</code></b></td></tr>
+<tr><td width="56px"></td><td width="56px"><img src="docs/imgs/flag_dem.png" width="25"/></td><td width="45px"><img src="docs/imgs/ling.svg" width="20px"/></td><td width="20px">1</td><td><b><code>determiner_head_lemma</code></b></td></tr>
+<tr><td width="56px"><img src="docs/imgs/flag_conll.png" width="25"/></td><td width="56px"></td><td width="45px"><img src="docs/imgs/ling.svg" width="20px"/></td><td width="20px">1</td><td><b><code>determiner_type</code></b></td></tr>
+<tr><td width="56px"><img src="docs/imgs/flag_conll.png" width="25"/></td><td width="56px"></td><td width="45px"><img src="docs/imgs/ling.svg" width="20px"/></td><td width="20px">1</td><td><b><code>has_bare_determiner</code></b></td></tr>
+<tr><td width="56px"><img src="docs/imgs/flag_conll.png" width="25"/></td><td width="56px"><img src="docs/imgs/flag_dem.png" width="25"/></td><td width="45px"><img src="docs/imgs/ling.svg" width="20px"/></td><td width="20px">1</td><td><b><code>has_genetive_determiner</code></b></td></tr>
+<tr><td width="56px"><img src="docs/imgs/flag_conll.png" width="25"/></td><td width="56px"><img src="docs/imgs/flag_dem.png" width="25"/></td><td width="45px"><img src="docs/imgs/ling.svg" width="20px"/></td><td width="20px">1</td><td><b><code>has_complex_determiner</code></b></td></tr>
+<tr><td width="56px"></td><td width="56px"><img src="docs/imgs/flag_dem.png" width="25"/></td><td width="45px"><img src="docs/imgs/ling.svg" width="20px"/></td><td width="20px">1</td><td><b><code>is_determiner</code></b></td></tr>
+<tr><td width="56px"><img src="docs/imgs/flag_conll.png" width="25"/></td><td width="56px"></td><td width="45px"><img src="docs/imgs/ling.svg" width="20px"/></td><td width="20px">1</td><td><b><code>is_possessive</code></b></td></tr>
+<tr><td width="56px"></td><td width="56px"><img src="docs/imgs/flag_dem.png" width="25"/></td><td width="45px"><img src="docs/imgs/ling.svg" width="20px"/></td><td width="20px">1</td><td><b><code>is_possessive_determiner</code></b></td></tr>
+<tr><td width="56px"><img src="docs/imgs/flag_conll.png" width="25"/></td><td width="56px"></td><td width="45px"><img src="docs/imgs/ling.svg" width="20px"/></td><td width="20px">1</td><td><b><code>is_genitive</code></b></td></tr>
+<tr><td width="56px"></td><td width="56px"><img src="docs/imgs/flag_dem.png" width="25"/></td><td width="45px"><img src="docs/imgs/ling.svg" width="20px"/></td><td width="20px">1</td><td><b><code>is_genitive_determiner</code></b></td></tr>
 </table>
 
 Head:
 
 <table width="100%" class="features">
-<tr><td width="30px"><img src="docs/imgs/flag_conll.png" width="25"/></td><td width="30px"><img src="docs/imgs/flag_dem.png" width="25"/></td><td width="25px"><img src="docs/imgs/ling.svg" width="20px"/></td><td width="20px">1</td><td><b><code>head</code></b>: the actual text of the head</td></tr>
-<tr><td width="30px"><img src="docs/imgs/flag_conll.png" width="25"/></td><td width="30px"><img src="docs/imgs/flag_dem.png" width="25"/></td><td width="25px"><img src="docs/imgs/ling.svg" width="20px"/></td><td width="20px">1</td><td><b><code>h_lemma</code>:</b> the lemma of the head</td></tr>
+<tr><td width="56px"><img src="docs/imgs/flag_conll.png" width="25"/></td><td width="56px"><img src="docs/imgs/flag_dem.png" width="25"/></td><td width="45px"><img src="docs/imgs/ling.svg" width="20px"/></td><td width="20px">1</td><td><b><code>head</code></b>: the actual text of the head</td></tr>
+<tr><td width="56px"><img src="docs/imgs/flag_conll.png" width="25"/></td><td width="56px"><img src="docs/imgs/flag_dem.png" width="25"/></td><td width="45px"><img src="docs/imgs/ling.svg" width="20px"/></td><td width="20px">1</td><td><b><code>h_lemma</code>:</b> the lemma of the head</td></tr>
 </table>
 
 Head position:
 
 <table width="100%" class="features">
-<tr><td width="30px"><img src="docs/imgs/flag_conll.png" width="25"/></td><td width="30px"><img src="docs/imgs/flag_dem.png" width="25"/></td><td width="25px"><img src="docs/imgs/ling.svg" width="20px"/></td><td width="20px">1</td><td><b><code>h_{start,end}</code></b>: index of the head in the sentence</td></tr>
-<tr><td width="30px"><img src="docs/imgs/flag_conll.png" width="25"/></td><td width="30px"><img src="docs/imgs/flag_dem.png" width="25"/></td><td width="25px"><img src="docs/imgs/ling.svg" width="20px"/></td><td width="20px">1</td><td><b><code>h_text_{start,end}</code></b>: in the text</td></tr>
+<tr><td width="56px"><img src="docs/imgs/flag_conll.png" width="25"/></td><td width="56px"><img src="docs/imgs/flag_dem.png" width="25"/></td><td width="45px"><img src="docs/imgs/ling.svg" width="20px"/></td><td width="20px">1</td><td><b><code>h_{start,end}</code></b>: index of the head in the sentence</td></tr>
+<tr><td width="56px"><img src="docs/imgs/flag_conll.png" width="25"/></td><td width="56px"><img src="docs/imgs/flag_dem.png" width="25"/></td><td width="45px"><img src="docs/imgs/ling.svg" width="20px"/></td><td width="20px">1</td><td><b><code>h_text_{start,end}</code></b>: in the text</td></tr>
 </table>
 
 Morphosyntax and syntax of the head:
 
 <table width="100%" class="features">
-<tr><td width="30px"><img src="docs/imgs/flag_conll.png" width="25"/></td><td width="30px"></td><td width="25px"><img src="docs/imgs/ling.svg" width="20px"/></td><td width="20px">1</td><td><b><code>h_pspeech</code></b></td></tr>
-<tr><td width="30px"><img src="docs/imgs/flag_conll.png" width="25"/></td><td width="30px"></td><td width="25px"><img src="docs/imgs/ling.svg" width="20px"/></td><td width="20px">1</td><td><b><code>h_ud_pspeech</code></b></td></tr>
-<tr><td width="30px"><img src="docs/imgs/flag_conll.png" width="25"/></td><td width="30px"><img src="docs/imgs/flag_dem.png" width="25"/></td><td width="25px"><img src="docs/imgs/ling.svg" width="20px"/></td><td width="20px">1</td><td><b><code>h_broad_pspeech</code></b>: one of <code>[npdvo]</code> (noun, pronoun, determiner, verb, other)</td></tr>
-<tr><td width="30px"><img src="docs/imgs/flag_conll.png" width="25"/></td><td width="30px"><img src="docs/imgs/flag_dem.png" width="25"/></td><td width="25px"><img src="docs/imgs/ling.svg" width="20px"/></td><td width="20px">1</td><td><b><code>h_noun_type</code></b>: proper or common, see the possible values in the list of possible values</td></tr>
-<tr><td width="30px"></td><td width="30px"><img src="docs/imgs/flag_dem.png" width="25"/></td><td width="25px"><img src="docs/imgs/ling.svg" width="20px"/></td><td width="20px">1</td><td><b><code>h_pronoun_type</code></b></td></tr>
-<tr><td width="30px"></td><td width="30px"><img src="docs/imgs/flag_dem.png" width="25"/></td><td width="25px"><img src="docs/imgs/ling.svg" width="20px"/></td><td width="20px">1</td><td><b><code>h_reflex</code></b>: is reflexive (if pronoun)</td></tr>
-<tr><td width="30px"></td><td width="30px"><img src="docs/imgs/flag_dem.png" width="25"/></td><td width="25px"><img src="docs/imgs/ling.svg" width="20px"/></td><td width="20px">1</td><td><b><code>h_poss</code></b>: is possessive (is pronoun)</td></tr>
-<tr><td width="30px"></td><td width="30px"><img src="docs/imgs/flag_dem.png" width="25"/></td><td width="25px"><img src="docs/imgs/ling.svg" width="20px"/></td><td width="20px">1</td><td><b><code>h_definite</code></b>: is definite (if determiner)</td></tr>
+<tr><td width="56px"><img src="docs/imgs/flag_conll.png" width="25"/></td><td width="56px"></td><td width="45px"><img src="docs/imgs/ling.svg" width="20px"/></td><td width="20px">1</td><td><b><code>h_pspeech</code></b></td></tr>
+<tr><td width="56px"><img src="docs/imgs/flag_conll.png" width="25"/></td><td width="56px"></td><td width="45px"><img src="docs/imgs/ling.svg" width="20px"/></td><td width="20px">1</td><td><b><code>h_ud_pspeech</code></b></td></tr>
+<tr><td width="56px"><img src="docs/imgs/flag_conll.png" width="25"/></td><td width="56px"><img src="docs/imgs/flag_dem.png" width="25"/></td><td width="45px"><img src="docs/imgs/ling.svg" width="20px"/></td><td width="20px">1</td><td><b><code>h_broad_pspeech</code></b>: one of <code>[npdvo]</code> (noun, pronoun, determiner, verb, other)</td></tr>
+<tr><td width="56px"><img src="docs/imgs/flag_conll.png" width="25"/></td><td width="56px"><img src="docs/imgs/flag_dem.png" width="25"/></td><td width="45px"><img src="docs/imgs/ling.svg" width="20px"/></td><td width="20px">1</td><td><b><code>h_noun_type</code></b>: proper or common, see the possible values in the list of possible values</td></tr>
+<tr><td width="56px"></td><td width="56px"><img src="docs/imgs/flag_dem.png" width="25"/></td><td width="45px"><img src="docs/imgs/ling.svg" width="20px"/></td><td width="20px">1</td><td><b><code>h_pronoun_type</code></b></td></tr>
+<tr><td width="56px"></td><td width="56px"><img src="docs/imgs/flag_dem.png" width="25"/></td><td width="45px"><img src="docs/imgs/ling.svg" width="20px"/></td><td width="20px">1</td><td><b><code>h_reflex</code></b>: is reflexive (if pronoun)</td></tr>
+<tr><td width="56px"></td><td width="56px"><img src="docs/imgs/flag_dem.png" width="25"/></td><td width="45px"><img src="docs/imgs/ling.svg" width="20px"/></td><td width="20px">1</td><td><b><code>h_poss</code></b>: is possessive (is pronoun)</td></tr>
+<tr><td width="56px"></td><td width="56px"><img src="docs/imgs/flag_dem.png" width="25"/></td><td width="45px"><img src="docs/imgs/ling.svg" width="20px"/></td><td width="20px">1</td><td><b><code>h_definite</code></b>: is definite (if determiner)</td></tr>
 </table>
 
 Declension:
 
 <table width="100%" class="features">
-<tr><td width="30px"><img src="docs/imgs/flag_conll.png" width="25"/></td><td width="30px"><img src="docs/imgs/flag_dem.png" width="25"/></td><td width="25px"><img src="docs/imgs/ling.svg" width="20px"/></td><td width="20px">1</td><td><b><code>h_number</code></b></td></tr>
-<tr><td width="30px"></td><td width="30px"><img src="docs/imgs/flag_dem.png" width="25"/></td><td width="25px"><img src="docs/imgs/ling.svg" width="20px"/></td><td width="20px">1</td><td><b><code>h_gender</code></b></td></tr>
-<tr><td width="30px"></td><td width="30px"><img src="docs/imgs/flag_dem.png" width="25"/></td><td width="25px"><img src="docs/imgs/ling.svg" width="20px"/></td><td width="20px">1</td><td><b><code>h_person</code></b></td></tr>
+<tr><td width="56px"><img src="docs/imgs/flag_conll.png" width="25"/></td><td width="56px"><img src="docs/imgs/flag_dem.png" width="25"/></td><td width="45px"><img src="docs/imgs/ling.svg" width="20px"/></td><td width="20px">1</td><td><b><code>h_number</code></b></td></tr>
+<tr><td width="56px"></td><td width="56px"><img src="docs/imgs/flag_dem.png" width="25"/></td><td width="45px"><img src="docs/imgs/ling.svg" width="20px"/></td><td width="20px">1</td><td><b><code>h_gender</code></b></td></tr>
+<tr><td width="56px"></td><td width="56px"><img src="docs/imgs/flag_dem.png" width="25"/></td><td width="45px"><img src="docs/imgs/ling.svg" width="20px"/></td><td width="20px">1</td><td><b><code>h_person</code></b></td></tr>
 </table>
 
 Syntactic depth of the head:
 
 <table width="100%" class="features">
-<tr><td width="30px"></td><td width="30px"><img src="docs/imgs/flag_dem.png" width="25"/></td><td width="25px"><img src="docs/imgs/ling.svg" width="20px"/></td><td width="20px">1</td><td><b><code>h_level</code></b></td></tr>
-<tr><td width="30px"><img src="docs/imgs/flag_conll.png" width="25"/></td><td width="30px"></td><td width="25px"><img src="docs/imgs/ling.svg" width="20px"/></td><td width="20px">1</td><td><b><code>h_node_depth</code></b></td></tr>
+<tr><td width="56px"></td><td width="56px"><img src="docs/imgs/flag_dem.png" width="25"/></td><td width="45px"><img src="docs/imgs/ling.svg" width="20px"/></td><td width="20px">1</td><td><b><code>h_level</code></b></td></tr>
+<tr><td width="56px"><img src="docs/imgs/flag_conll.png" width="25"/></td><td width="56px"></td><td width="45px"><img src="docs/imgs/ling.svg" width="20px"/></td><td width="20px">1</td><td><b><code>h_node_depth</code></b></td></tr>
 </table>
 
 Argument structure:
 
 <table width="100%" class="features">
-<tr><td width="30px"><img src="docs/imgs/flag_conll.png" width="25"/></td><td width="30px"><img src="docs/imgs/flag_dem.png" width="25"/></td><td width="25px"><img src="docs/imgs/ling.svg" width="20px"/></td><td width="20px">1</td><td><b><code>struct_id</code></b>: the id of the structure; it is not referenced elsewhere in the relational database, it is an arbitrary number used to determine if two mentions are in the same structure</td></tr>
-<tr><td width="30px"><img src="docs/imgs/flag_conll.png" width="25"/></td><td width="30px"><img src="docs/imgs/flag_dem.png" width="25"/></td><td width="25px"><img src="docs/imgs/ling.svg" width="20px"/></td><td width="20px">1</td><td><b><code>struct_is_negative</code></b></td></tr>
-<tr><td width="30px"></td><td width="30px"><img src="docs/imgs/flag_dem.png" width="25"/></td><td width="25px"><img src="docs/imgs/ling.svg" width="20px"/></td><td width="20px">1</td><td><b><code>struct_is_passive</code></b></td></tr>
-<tr><td width="30px"></td><td width="30px"><img src="docs/imgs/flag_dem.png" width="25"/></td><td width="25px"><img src="docs/imgs/ling.svg" width="20px"/></td><td width="20px">1</td><td><b><code>struct_tense</code></b></td></tr>
-<tr><td width="30px"></td><td width="30px"><img src="docs/imgs/flag_dem.png" width="25"/></td><td width="25px"><img src="docs/imgs/ling.svg" width="20px"/></td><td width="20px">1</td><td><b><code>struct_mood</code></b></td></tr>
-<tr><td width="30px"></td><td width="30px"><img src="docs/imgs/flag_dem.png" width="25"/></td><td width="25px"><img src="docs/imgs/ling.svg" width="20px"/></td><td width="20px">1</td><td><b><code>struct_person</code></b></td></tr>
+<tr><td width="56px"><img src="docs/imgs/flag_conll.png" width="25"/></td><td width="56px"><img src="docs/imgs/flag_dem.png" width="25"/></td><td width="45px"><img src="docs/imgs/ling.svg" width="20px"/></td><td width="20px">1</td><td><b><code>struct_id</code></b>: the id of the structure; it is not referenced elsewhere in the relational database, it is an arbitrary number used to determine if two mentions are in the same structure</td></tr>
+<tr><td width="56px"><img src="docs/imgs/flag_conll.png" width="25"/></td><td width="56px"><img src="docs/imgs/flag_dem.png" width="25"/></td><td width="45px"><img src="docs/imgs/ling.svg" width="20px"/></td><td width="20px">1</td><td><b><code>struct_is_negative</code></b></td></tr>
+<tr><td width="56px"></td><td width="56px"><img src="docs/imgs/flag_dem.png" width="25"/></td><td width="45px"><img src="docs/imgs/ling.svg" width="20px"/></td><td width="20px">1</td><td><b><code>struct_is_passive</code></b></td></tr>
+<tr><td width="56px"></td><td width="56px"><img src="docs/imgs/flag_dem.png" width="25"/></td><td width="45px"><img src="docs/imgs/ling.svg" width="20px"/></td><td width="20px">1</td><td><b><code>struct_tense</code></b></td></tr>
+<tr><td width="56px"></td><td width="56px"><img src="docs/imgs/flag_dem.png" width="25"/></td><td width="45px"><img src="docs/imgs/ling.svg" width="20px"/></td><td width="20px">1</td><td><b><code>struct_mood</code></b></td></tr>
+<tr><td width="56px"></td><td width="56px"><img src="docs/imgs/flag_dem.png" width="25"/></td><td width="45px"><img src="docs/imgs/ling.svg" width="20px"/></td><td width="20px">1</td><td><b><code>struct_person</code></b></td></tr>
 </table>
 
 Arguments of the structure:
 
 <table width="100%" class="features">
-<tr><td width="30px"><img src="docs/imgs/flag_conll.png" width="25"/></td><td width="30px"><img src="docs/imgs/flag_dem.png" width="25"/></td><td width="25px"><img src="docs/imgs/ling.svg" width="20px"/></td><td width="20px">1</td><td><b><code>is_arg</code></b>: the mention matches the boundaries of an argument</td></tr>
-<tr><td width="30px"><img src="docs/imgs/flag_conll.png" width="25"/></td><td width="30px"><img src="docs/imgs/flag_dem.png" width="25"/></td><td width="25px"><img src="docs/imgs/ling.svg" width="20px"/></td><td width="20px">1</td><td><b><code>arg_index</code></b>: index of the argument in the structure (first argument has index 0)</td></tr>
-<tr><td width="30px"><img src="docs/imgs/flag_conll.png" width="25"/></td><td width="30px"><img src="docs/imgs/flag_dem.png" width="25"/></td><td width="25px"><img src="docs/imgs/ling.svg" width="20px"/></td><td width="20px">1</td><td><b><code>arg_type</code></b>: <code>ARG0</code>: agent; <code>ARG1</code>: patient; <code>ARG2</code>: instrument, benefactive, attribute; <code>ARG3</code>: starting point, benefactive, attribute; <code>ARG4</code>: ending point; <code>ARGM</code>: modifier, with a subclassification (<code>LOC</code> for locative, <code>GOL</code> for goal, etc.)</td></tr>
-<tr><td width="30px"><img src="docs/imgs/flag_conll.png" width="25"/></td><td width="30px"></td><td width="25px"><img src="docs/imgs/ling.svg" width="20px"/></td><td width="20px">1</td><td><b><code>arg_is_agent</code></b>: arg_type is <code>ARG0</code></td></tr>
+<tr><td width="56px"><img src="docs/imgs/flag_conll.png" width="25"/></td><td width="56px"><img src="docs/imgs/flag_dem.png" width="25"/></td><td width="45px"><img src="docs/imgs/ling.svg" width="20px"/></td><td width="20px">1</td><td><b><code>is_arg</code></b>: the mention matches the boundaries of an argument</td></tr>
+<tr><td width="56px"><img src="docs/imgs/flag_conll.png" width="25"/></td><td width="56px"><img src="docs/imgs/flag_dem.png" width="25"/></td><td width="45px"><img src="docs/imgs/ling.svg" width="20px"/></td><td width="20px">1</td><td><b><code>arg_index</code></b>: index of the argument in the structure (first argument has index 0)</td></tr>
+<tr><td width="56px"><img src="docs/imgs/flag_conll.png" width="25"/></td><td width="56px"><img src="docs/imgs/flag_dem.png" width="25"/></td><td width="45px"><img src="docs/imgs/ling.svg" width="20px"/></td><td width="20px">1</td><td><b><code>arg_type</code></b>: <code>ARG0</code>: agent; <code>ARG1</code>: patient; <code>ARG2</code>: instrument, benefactive, attribute; <code>ARG3</code>: starting point, benefactive, attribute; <code>ARG4</code>: ending point; <code>ARGM</code>: modifier, with a subclassification (<code>LOC</code> for locative, <code>GOL</code> for goal, etc.)</td></tr>
+<tr><td width="56px"><img src="docs/imgs/flag_conll.png" width="25"/></td><td width="56px"></td><td width="45px"><img src="docs/imgs/ling.svg" width="20px"/></td><td width="20px">1</td><td><b><code>arg_is_agent</code></b>: arg_type is <code>ARG0</code></td></tr>
 </table>
 
 WordNet:
 
 <table width="100%" class="features">
-<tr><td width="30px"><img src="docs/imgs/flag_conll.png" width="25"/></td><td width="30px"></td><td width="25px"><img src="docs/imgs/ling.svg" width="20px"/></td><td width="20px">1</td><td><b><code>wn</code></b>: WordNet synset</td></tr>
+<tr><td width="56px"><img src="docs/imgs/flag_conll.png" width="25"/></td><td width="56px"></td><td width="45px"><img src="docs/imgs/ling.svg" width="20px"/></td><td width="20px">1</td><td><b><code>wn</code></b>: WordNet synset</td></tr>
 </table>
 
 
 The following fields are copied from the <code>texts</code> table for convenience:
 
 <table width="100%" class="features">
-<tr><td width="30px"><img src="docs/imgs/flag_conll.png" width="25"/></td><td width="30px"><img src="docs/imgs/flag_dem.png" width="25"/></td><td width="25px"><img src="docs/imgs/ling.svg" width="20px"/></td><td width="20px">2</td><td><b><code>text_genre</code></b></td></tr>
-<tr><td width="30px"></td><td width="30px"><img src="docs/imgs/flag_dem.png" width="25"/></td><td width="25px"><img src="docs/imgs/ling.svg" width="20px"/></td><td width="20px">2</td><td><b><code>text_source</code></b></td></tr>
-<tr><td width="30px"><img src="docs/imgs/flag_conll.png" width="25"/></td><td width="30px"><img src="docs/imgs/flag_dem.png" width="25"/></td><td width="25px"><img src="docs/imgs/base.svg" width="20px"/></td><td width="20px">2</td><td><b><code>text_token_count</code></b></td></tr>
-<tr><td width="30px"><img src="docs/imgs/flag_conll.png" width="25"/></td><td width="30px"><img src="docs/imgs/flag_dem.png" width="25"/></td><td width="25px"><img src="docs/imgs/base.svg" width="20px"/></td><td width="20px">2</td><td><b><code>text_mention_count</code></b></td></tr>
-<tr><td width="30px"><img src="docs/imgs/flag_conll.png" width="25"/></td><td width="30px"><img src="docs/imgs/flag_dem.png" width="25"/></td><td width="25px"><img src="docs/imgs/base.svg" width="20px"/></td><td width="20px">2</td><td><b><code>text_chain_count</code></b></td></tr>
+<tr><td width="56px"><img src="docs/imgs/flag_conll.png" width="25"/></td><td width="56px"><img src="docs/imgs/flag_dem.png" width="25"/></td><td width="45px"><img src="docs/imgs/ling.svg" width="20px"/></td><td width="20px">2</td><td><b><code>text_genre</code></b></td></tr>
+<tr><td width="56px"></td><td width="56px"><img src="docs/imgs/flag_dem.png" width="25"/></td><td width="45px"><img src="docs/imgs/ling.svg" width="20px"/></td><td width="20px">2</td><td><b><code>text_source</code></b></td></tr>
+<tr><td width="56px"><img src="docs/imgs/flag_conll.png" width="25"/></td><td width="56px"><img src="docs/imgs/flag_dem.png" width="25"/></td><td width="45px"><img src="docs/imgs/base.svg" width="20px"/></td><td width="20px">2</td><td><b><code>text_token_count</code></b></td></tr>
+<tr><td width="56px"><img src="docs/imgs/flag_conll.png" width="25"/></td><td width="56px"><img src="docs/imgs/flag_dem.png" width="25"/></td><td width="45px"><img src="docs/imgs/base.svg" width="20px"/></td><td width="20px">2</td><td><b><code>text_mention_count</code></b></td></tr>
+<tr><td width="56px"><img src="docs/imgs/flag_conll.png" width="25"/></td><td width="56px"><img src="docs/imgs/flag_dem.png" width="25"/></td><td width="45px"><img src="docs/imgs/base.svg" width="20px"/></td><td width="20px">2</td><td><b><code>text_chain_count</code></b></td></tr>
 </table>
 
 
 The following fields are copied from the <code>chains</code> table for convenience:
 
 <table width="100%" class="features">
-<tr><td width="30px"><img src="docs/imgs/flag_conll.png" width="25"/></td><td width="30px"><img src="docs/imgs/flag_dem.png" width="25"/></td><td width="25px"><img src="docs/imgs/base.svg" width="20px"/></td><td width="20px">2</td><td><b><code>chain_size</code></b></td></tr>
-<tr><td width="30px"><img src="docs/imgs/flag_conll.png" width="25"/></td><td width="30px"><img src="docs/imgs/flag_dem.png" width="25"/></td><td width="25px"><img src="docs/imgs/ling.svg" width="20px"/></td><td width="20px">2</td><td><b><code>chain_type</code></b></td></tr>
-<tr><td width="30px"><img src="docs/imgs/flag_conll.png" width="25"/></td><td width="30px"><img src="docs/imgs/flag_dem.png" width="25"/></td><td width="25px"><img src="docs/imgs/base.svg" width="20px"/></td><td width="20px">2</td><td><b><code>chain_coverage</code></b></td></tr>
-<tr><td width="30px"><img src="docs/imgs/flag_conll.png" width="25"/></td><td width="30px"><img src="docs/imgs/flag_dem.png" width="25"/></td><td width="25px"><img src="docs/imgs/base.svg" width="20px"/></td><td width="20px">2</td><td><b><code>chain_mean_token_dist</code></b></td></tr>
-<tr><td width="30px"><img src="docs/imgs/flag_conll.png" width="25"/></td><td width="30px"><img src="docs/imgs/flag_dem.png" width="25"/></td><td width="25px"><img src="docs/imgs/base.svg" width="20px"/></td><td width="20px">2</td><td><b><code>chain_median_token_dist</code></b></td></tr>
+<tr><td width="56px"><img src="docs/imgs/flag_conll.png" width="25"/></td><td width="56px"><img src="docs/imgs/flag_dem.png" width="25"/></td><td width="45px"><img src="docs/imgs/base.svg" width="20px"/></td><td width="20px">2</td><td><b><code>chain_size</code></b></td></tr>
+<tr><td width="56px"><img src="docs/imgs/flag_conll.png" width="25"/></td><td width="56px"><img src="docs/imgs/flag_dem.png" width="25"/></td><td width="45px"><img src="docs/imgs/ling.svg" width="20px"/></td><td width="20px">2</td><td><b><code>chain_type</code></b></td></tr>
+<tr><td width="56px"><img src="docs/imgs/flag_conll.png" width="25"/></td><td width="56px"><img src="docs/imgs/flag_dem.png" width="25"/></td><td width="45px"><img src="docs/imgs/base.svg" width="20px"/></td><td width="20px">2</td><td><b><code>chain_coverage</code></b></td></tr>
+<tr><td width="56px"><img src="docs/imgs/flag_conll.png" width="25"/></td><td width="56px"><img src="docs/imgs/flag_dem.png" width="25"/></td><td width="45px"><img src="docs/imgs/base.svg" width="20px"/></td><td width="20px">2</td><td><b><code>chain_mean_token_dist</code></b></td></tr>
+<tr><td width="56px"><img src="docs/imgs/flag_conll.png" width="25"/></td><td width="56px"><img src="docs/imgs/flag_dem.png" width="25"/></td><td width="45px"><img src="docs/imgs/base.svg" width="20px"/></td><td width="20px">2</td><td><b><code>chain_median_token_dist</code></b></td></tr>
 </table>
 
 
@@ -479,83 +479,83 @@ Note that in the default databases, the relations are only relations between con
 Primary and foreign keys:
 
 <table width="100%" class="features">
-<tr><td width="30px"><img src="docs/imgs/flag_conll.png" width="25"/></td><td width="30px"><img src="docs/imgs/flag_dem.png" width="25"/></td><td width="25px"><img src="docs/imgs/base.svg" width="20px"/></td><td width="20px">1</td><td><b><code>id</code></b></td></tr>
-<tr><td width="30px"><img src="docs/imgs/flag_conll.png" width="25"/></td><td width="30px"><img src="docs/imgs/flag_dem.png" width="25"/></td><td width="25px"><img src="docs/imgs/base.svg" width="20px"/></td><td width="20px">1</td><td><b><code>chain_id</code></b></td></tr>
-<tr><td width="30px"><img src="docs/imgs/flag_conll.png" width="25"/></td><td width="30px"><img src="docs/imgs/flag_dem.png" width="25"/></td><td width="25px"><img src="docs/imgs/base.svg" width="20px"/></td><td width="20px">1</td><td><b><code>m1_id</code></b></td></tr>
-<tr><td width="30px"><img src="docs/imgs/flag_conll.png" width="25"/></td><td width="30px"><img src="docs/imgs/flag_dem.png" width="25"/></td><td width="25px"><img src="docs/imgs/base.svg" width="20px"/></td><td width="20px">1</td><td><b><code>m2_id</code></b></td></tr>
-<tr><td width="30px"><img src="docs/imgs/flag_conll.png" width="25"/></td><td width="30px"><img src="docs/imgs/flag_dem.png" width="25"/></td><td width="25px"><img src="docs/imgs/base.svg" width="20px"/></td><td width="20px">1</td><td><b><code>text_id</code></b></td></tr>
+<tr><td width="56px"><img src="docs/imgs/flag_conll.png" width="25"/></td><td width="56px"><img src="docs/imgs/flag_dem.png" width="25"/></td><td width="45px"><img src="docs/imgs/base.svg" width="20px"/></td><td width="20px">1</td><td><b><code>id</code></b></td></tr>
+<tr><td width="56px"><img src="docs/imgs/flag_conll.png" width="25"/></td><td width="56px"><img src="docs/imgs/flag_dem.png" width="25"/></td><td width="45px"><img src="docs/imgs/base.svg" width="20px"/></td><td width="20px">1</td><td><b><code>chain_id</code></b></td></tr>
+<tr><td width="56px"><img src="docs/imgs/flag_conll.png" width="25"/></td><td width="56px"><img src="docs/imgs/flag_dem.png" width="25"/></td><td width="45px"><img src="docs/imgs/base.svg" width="20px"/></td><td width="20px">1</td><td><b><code>m1_id</code></b></td></tr>
+<tr><td width="56px"><img src="docs/imgs/flag_conll.png" width="25"/></td><td width="56px"><img src="docs/imgs/flag_dem.png" width="25"/></td><td width="45px"><img src="docs/imgs/base.svg" width="20px"/></td><td width="20px">1</td><td><b><code>m2_id</code></b></td></tr>
+<tr><td width="56px"><img src="docs/imgs/flag_conll.png" width="25"/></td><td width="56px"><img src="docs/imgs/flag_dem.png" width="25"/></td><td width="45px"><img src="docs/imgs/base.svg" width="20px"/></td><td width="20px">1</td><td><b><code>text_id</code></b></td></tr>
 </table>
 
 Distance between the mentions in the relation:
 
 <table width="100%" class="features">
-<tr><td width="30px"><img src="docs/imgs/flag_conll.png" width="25"/></td><td width="30px"><img src="docs/imgs/flag_dem.png" width="25"/></td><td width="25px"><img src="docs/imgs/base.svg" width="20px"/></td><td width="20px">2</td><td><b><code>{token,mention,sent,par}_dist</code></b>: in tokens, mentions, sentences, paragraphs</td></tr>
+<tr><td width="56px"><img src="docs/imgs/flag_conll.png" width="25"/></td><td width="56px"><img src="docs/imgs/flag_dem.png" width="25"/></td><td width="45px"><img src="docs/imgs/base.svg" width="20px"/></td><td width="20px">2</td><td><b><code>{token,mention,sent,par}_dist</code></b>: in tokens, mentions, sentences, paragraphs</td></tr>
 </table>
 
 Type of the relation:
 
 <table width="100%" class="features">
-<tr><td width="30px"><img src="docs/imgs/flag_conll.png" width="25"/></td><td width="30px"><img src="docs/imgs/flag_dem.png" width="25"/></td><td width="25px"><img src="docs/imgs/base.svg" width="20px"/></td><td width="20px">2</td><td><b><code>is_consecutive</code></b>: the mentions of the relations are consecutive (always the case in the default database)</td></tr>
-<tr><td width="30px"><img src="docs/imgs/flag_conll.png" width="25"/></td><td width="30px"><img src="docs/imgs/flag_dem.png" width="25"/></td><td width="25px"><img src="docs/imgs/base.svg" width="20px"/></td><td width="20px">2</td><td><b><code>is_to_first</code></b>: the first mention is the first mention of the chain (never the case in the default database)</td></tr>
+<tr><td width="56px"><img src="docs/imgs/flag_conll.png" width="25"/></td><td width="56px"><img src="docs/imgs/flag_dem.png" width="25"/></td><td width="45px"><img src="docs/imgs/base.svg" width="20px"/></td><td width="20px">2</td><td><b><code>is_consecutive</code></b>: the mentions of the relations are consecutive (always the case in the default database)</td></tr>
+<tr><td width="56px"><img src="docs/imgs/flag_conll.png" width="25"/></td><td width="56px"><img src="docs/imgs/flag_dem.png" width="25"/></td><td width="45px"><img src="docs/imgs/base.svg" width="20px"/></td><td width="20px">2</td><td><b><code>is_to_first</code></b>: the first mention is the first mention of the chain (never the case in the default database)</td></tr>
 </table>
 
 Comparing the two mentions:
 
 <table width="100%" class="features">
-<tr><td width="30px"><img src="docs/imgs/flag_conll.png" width="25"/></td><td width="30px"><img src="docs/imgs/flag_dem.png" width="25"/></td><td width="25px"><img src="docs/imgs/base.svg" width="20px"/></td><td width="20px">2</td><td><b><code>same_sent_id</code></b>: are the mentions in the same sentence?</td></tr>
-<tr><td width="30px"><img src="docs/imgs/flag_conll.png" width="25"/></td><td width="30px"><img src="docs/imgs/flag_dem.png" width="25"/></td><td width="25px"><img src="docs/imgs/base.svg" width="20px"/></td><td width="20px">2</td><td><b><code>same_par_id</code></b>: are the mentions in the same paragraph?</td></tr>
-<tr><td width="30px"><img src="docs/imgs/flag_conll.png" width="25"/></td><td width="30px"><img src="docs/imgs/flag_dem.png" width="25"/></td><td width="25px"><img src="docs/imgs/base.svg" width="20px"/></td><td width="20px">2</td><td><b><code>same_string</code></b>: do the mentions have the same textual content?</td></tr>
-<tr><td width="30px"><img src="docs/imgs/flag_conll.png" width="25"/></td><td width="30px"><img src="docs/imgs/flag_dem.png" width="25"/></td><td width="25px"><img src="docs/imgs/base.svg" width="20px"/></td><td width="20px">2</td><td><b><code>same_is_outer</code></b>: are the mentions both nested or both not nested?</td></tr>
+<tr><td width="56px"><img src="docs/imgs/flag_conll.png" width="25"/></td><td width="56px"><img src="docs/imgs/flag_dem.png" width="25"/></td><td width="45px"><img src="docs/imgs/base.svg" width="20px"/></td><td width="20px">2</td><td><b><code>same_sent_id</code></b>: are the mentions in the same sentence?</td></tr>
+<tr><td width="56px"><img src="docs/imgs/flag_conll.png" width="25"/></td><td width="56px"><img src="docs/imgs/flag_dem.png" width="25"/></td><td width="45px"><img src="docs/imgs/base.svg" width="20px"/></td><td width="20px">2</td><td><b><code>same_par_id</code></b>: are the mentions in the same paragraph?</td></tr>
+<tr><td width="56px"><img src="docs/imgs/flag_conll.png" width="25"/></td><td width="56px"><img src="docs/imgs/flag_dem.png" width="25"/></td><td width="45px"><img src="docs/imgs/base.svg" width="20px"/></td><td width="20px">2</td><td><b><code>same_string</code></b>: do the mentions have the same textual content?</td></tr>
+<tr><td width="56px"><img src="docs/imgs/flag_conll.png" width="25"/></td><td width="56px"><img src="docs/imgs/flag_dem.png" width="25"/></td><td width="45px"><img src="docs/imgs/base.svg" width="20px"/></td><td width="20px">2</td><td><b><code>same_is_outer</code></b>: are the mentions both nested or both not nested?</td></tr>
 </table>
 
 Part of speech type:
 
 <table width="100%" class="features">
-<tr><td width="30px"><img src="docs/imgs/flag_conll.png" width="25"/></td><td width="30px"><img src="docs/imgs/flag_dem.png" width="25"/></td><td width="25px"><img src="docs/imgs/ling.svg" width="20px"/></td><td width="20px">2</td><td><b><code>type</code></b>: a string composed of the <code>h_broad_speech</code> of the two mentions, for example <code>n-n</code> for two nouns, <code>n-p</code> for a noun and a pronoun, etc.</td></tr>
+<tr><td width="56px"><img src="docs/imgs/flag_conll.png" width="25"/></td><td width="56px"><img src="docs/imgs/flag_dem.png" width="25"/></td><td width="45px"><img src="docs/imgs/ling.svg" width="20px"/></td><td width="20px">2</td><td><b><code>type</code></b>: a string composed of the <code>h_broad_speech</code> of the two mentions, for example <code>n-n</code> for two nouns, <code>n-p</code> for a noun and a pronoun, etc.</td></tr>
 </table>
 
 Formal distance:
 
 <table width="100%" class="features">
-<tr><td width="30px"><img src="docs/imgs/flag_conll.png" width="25"/></td><td width="30px"><img src="docs/imgs/flag_dem.png" width="25"/></td><td width="25px"><img src="docs/imgs/advanced.svg" width="20px"/></td><td width="20px">1</td><td><b><code>levensthein</code></b></td></tr>
-<tr><td width="30px"><img src="docs/imgs/flag_conll.png" width="25"/></td><td width="30px"><img src="docs/imgs/flag_dem.png" width="25"/></td><td width="25px"><img src="docs/imgs/advanced.svg" width="20px"/></td><td width="20px">1</td><td><b><code>sorensen_dice</code></b></td></tr>
+<tr><td width="56px"><img src="docs/imgs/flag_conll.png" width="25"/></td><td width="56px"><img src="docs/imgs/flag_dem.png" width="25"/></td><td width="45px"><img src="docs/imgs/advanced.svg" width="20px"/></td><td width="20px">1</td><td><b><code>levensthein</code></b></td></tr>
+<tr><td width="56px"><img src="docs/imgs/flag_conll.png" width="25"/></td><td width="56px"><img src="docs/imgs/flag_dem.png" width="25"/></td><td width="45px"><img src="docs/imgs/advanced.svg" width="20px"/></td><td width="20px">1</td><td><b><code>sorensen_dice</code></b></td></tr>
 </table>
 
 Cosine similarity:
 
 <table width="100%" class="features">
-<tr><td width="30px"><img src="docs/imgs/flag_conll.png" width="25"/></td><td width="30px"><img src="docs/imgs/flag_dem.png" width="25"/></td><td width="25px"><img src="docs/imgs/advanced.svg" width="20px"/></td><td width="20px">1</td><td><b><code>context_similarity</code></b>: (using FastText in English or French)</td></tr>
+<tr><td width="56px"><img src="docs/imgs/flag_conll.png" width="25"/></td><td width="56px"><img src="docs/imgs/flag_dem.png" width="25"/></td><td width="45px"><img src="docs/imgs/advanced.svg" width="20px"/></td><td width="20px">1</td><td><b><code>context_similarity</code></b>: (using FastText in English or French)</td></tr>
 </table>
 
 WordNet distance (computed with NLTK, WOLF used for French):
 
 <table width="100%" class="features">
-<tr><td width="30px"><img src="docs/imgs/flag_conll.png" width="25"/></td><td width="30px"><img src="docs/imgs/flag_dem.png" width="25"/></td><td width="25px"><img src="docs/imgs/advanced.svg" width="20px"/></td><td width="20px">1</td><td><b><code>{min,max}_wup_similarity</code></b>: when several synsets were possible for one or both mentions, all the combinations were computed: I report the min and the max value</td></tr>
-<tr><td width="30px"><img src="docs/imgs/flag_conll.png" width="25"/></td><td width="30px"><img src="docs/imgs/flag_dem.png" width="25"/></td><td width="25px"><img src="docs/imgs/advanced.svg" width="20px"/></td><td width="20px">1</td><td><b><code>{min,max}_path_similarity</code></b></td></tr>
-<tr><td width="30px"><img src="docs/imgs/flag_conll.png" width="25"/></td><td width="30px"><img src="docs/imgs/flag_dem.png" width="25"/></td><td width="25px"><img src="docs/imgs/advanced.svg" width="20px"/></td><td width="20px">1</td><td><b><code>{min,max}_shortest_path_distance</code></b></td></tr>
-<tr><td width="30px"><img src="docs/imgs/flag_conll.png" width="25"/></td><td width="30px"><img src="docs/imgs/flag_dem.png" width="25"/></td><td width="25px"><img src="docs/imgs/advanced.svg" width="20px"/></td><td width="20px">1</td><td><b><code>hypernymy</code></b>: whether the mentions are in a hypernymic relationship</td></tr>
-<tr><td width="30px"><img src="docs/imgs/flag_conll.png" width="25"/></td><td width="30px"><img src="docs/imgs/flag_dem.png" width="25"/></td><td width="25px"><img src="docs/imgs/advanced.svg" width="20px"/></td><td width="20px">1</td><td><b><code>meronymy</code></b>: whether the mentions are in a meronymic relationship</td></tr>
+<tr><td width="56px"><img src="docs/imgs/flag_conll.png" width="25"/></td><td width="56px"><img src="docs/imgs/flag_dem.png" width="25"/></td><td width="45px"><img src="docs/imgs/advanced.svg" width="20px"/></td><td width="20px">1</td><td><b><code>{min,max}_wup_similarity</code></b>: when several synsets were possible for one or both mentions, all the combinations were computed: I report the min and the max value</td></tr>
+<tr><td width="56px"><img src="docs/imgs/flag_conll.png" width="25"/></td><td width="56px"><img src="docs/imgs/flag_dem.png" width="25"/></td><td width="45px"><img src="docs/imgs/advanced.svg" width="20px"/></td><td width="20px">1</td><td><b><code>{min,max}_path_similarity</code></b></td></tr>
+<tr><td width="56px"><img src="docs/imgs/flag_conll.png" width="25"/></td><td width="56px"><img src="docs/imgs/flag_dem.png" width="25"/></td><td width="45px"><img src="docs/imgs/advanced.svg" width="20px"/></td><td width="20px">1</td><td><b><code>{min,max}_shortest_path_distance</code></b></td></tr>
+<tr><td width="56px"><img src="docs/imgs/flag_conll.png" width="25"/></td><td width="56px"><img src="docs/imgs/flag_dem.png" width="25"/></td><td width="45px"><img src="docs/imgs/advanced.svg" width="20px"/></td><td width="20px">1</td><td><b><code>hypernymy</code></b>: whether the mentions are in a hypernymic relationship</td></tr>
+<tr><td width="56px"><img src="docs/imgs/flag_conll.png" width="25"/></td><td width="56px"><img src="docs/imgs/flag_dem.png" width="25"/></td><td width="45px"><img src="docs/imgs/advanced.svg" width="20px"/></td><td width="20px">1</td><td><b><code>meronymy</code></b>: whether the mentions are in a meronymic relationship</td></tr>
 </table>
 
 The following fields are copied from the <code>texts</code> table for convenience:
 
 <table width="100%" class="features">
-<tr><td width="30px"><img src="docs/imgs/flag_conll.png" width="25"/></td><td width="30px"><img src="docs/imgs/flag_dem.png" width="25"/></td><td width="25px"><img src="docs/imgs/base.svg" width="20px"/></td><td width="20px">2</td><td><b><code>text_genre</code></b></td></tr>
-<tr><td width="30px"></td><td width="30px"><img src="docs/imgs/flag_dem.png" width="25"/></td><td width="25px"><img src="docs/imgs/base.svg" width="20px"/></td><td width="20px">2</td><td><b><code>text_source</code></b></td></tr>
-<tr><td width="30px"><img src="docs/imgs/flag_conll.png" width="25"/></td><td width="30px"><img src="docs/imgs/flag_dem.png" width="25"/></td><td width="25px"><img src="docs/imgs/base.svg" width="20px"/></td><td width="20px">2</td><td><b><code>text_token_count</code></b></td></tr>
-<tr><td width="30px"><img src="docs/imgs/flag_conll.png" width="25"/></td><td width="30px"><img src="docs/imgs/flag_dem.png" width="25"/></td><td width="25px"><img src="docs/imgs/base.svg" width="20px"/></td><td width="20px">2</td><td><b><code>text_mention_count</code></b></td></tr>
-<tr><td width="30px"><img src="docs/imgs/flag_conll.png" width="25"/></td><td width="30px"><img src="docs/imgs/flag_dem.png" width="25"/></td><td width="25px"><img src="docs/imgs/base.svg" width="20px"/></td><td width="20px">2</td><td><b><code>text_chain_count</code></b></td></tr>
+<tr><td width="56px"><img src="docs/imgs/flag_conll.png" width="25"/></td><td width="56px"><img src="docs/imgs/flag_dem.png" width="25"/></td><td width="45px"><img src="docs/imgs/base.svg" width="20px"/></td><td width="20px">2</td><td><b><code>text_genre</code></b></td></tr>
+<tr><td width="56px"></td><td width="56px"><img src="docs/imgs/flag_dem.png" width="25"/></td><td width="45px"><img src="docs/imgs/base.svg" width="20px"/></td><td width="20px">2</td><td><b><code>text_source</code></b></td></tr>
+<tr><td width="56px"><img src="docs/imgs/flag_conll.png" width="25"/></td><td width="56px"><img src="docs/imgs/flag_dem.png" width="25"/></td><td width="45px"><img src="docs/imgs/base.svg" width="20px"/></td><td width="20px">2</td><td><b><code>text_token_count</code></b></td></tr>
+<tr><td width="56px"><img src="docs/imgs/flag_conll.png" width="25"/></td><td width="56px"><img src="docs/imgs/flag_dem.png" width="25"/></td><td width="45px"><img src="docs/imgs/base.svg" width="20px"/></td><td width="20px">2</td><td><b><code>text_mention_count</code></b></td></tr>
+<tr><td width="56px"><img src="docs/imgs/flag_conll.png" width="25"/></td><td width="56px"><img src="docs/imgs/flag_dem.png" width="25"/></td><td width="45px"><img src="docs/imgs/base.svg" width="20px"/></td><td width="20px">2</td><td><b><code>text_chain_count</code></b></td></tr>
 </table>
 
 
 The following fields are copied from the <code>chains</code> table for convenience:
 
 <table width="100%" class="features">
-<tr><td width="30px"><img src="docs/imgs/flag_conll.png" width="25"/></td><td width="30px"><img src="docs/imgs/flag_dem.png" width="25"/></td><td width="25px"><img src="docs/imgs/base.svg" width="20px"/></td><td width="20px">2</td><td><b><code>chain_size</code></b></td></tr>
-<tr><td width="30px"><img src="docs/imgs/flag_conll.png" width="25"/></td><td width="30px"><img src="docs/imgs/flag_dem.png" width="25"/></td><td width="25px"><img src="docs/imgs/ling.svg" width="20px"/></td><td width="20px">2</td><td><b><code>chain_type</code></b></td></tr>
-<tr><td width="30px"><img src="docs/imgs/flag_conll.png" width="25"/></td><td width="30px"><img src="docs/imgs/flag_dem.png" width="25"/></td><td width="25px"><img src="docs/imgs/base.svg" width="20px"/></td><td width="20px">2</td><td><b><code>chain_coverage</code></b></td></tr>
-<tr><td width="30px"><img src="docs/imgs/flag_conll.png" width="25"/></td><td width="30px"><img src="docs/imgs/flag_dem.png" width="25"/></td><td width="25px"><img src="docs/imgs/base.svg" width="20px"/></td><td width="20px">2</td><td><b><code>chain_mean_token_dist</code></b></td></tr>
-<tr><td width="30px"><img src="docs/imgs/flag_conll.png" width="25"/></td><td width="30px"><img src="docs/imgs/flag_dem.png" width="25"/></td><td width="25px"><img src="docs/imgs/base.svg" width="20px"/></td><td width="20px">2</td><td><b><code>chain_median_token_dist</code></b></td></tr>
+<tr><td width="56px"><img src="docs/imgs/flag_conll.png" width="25"/></td><td width="56px"><img src="docs/imgs/flag_dem.png" width="25"/></td><td width="45px"><img src="docs/imgs/base.svg" width="20px"/></td><td width="20px">2</td><td><b><code>chain_size</code></b></td></tr>
+<tr><td width="56px"><img src="docs/imgs/flag_conll.png" width="25"/></td><td width="56px"><img src="docs/imgs/flag_dem.png" width="25"/></td><td width="45px"><img src="docs/imgs/ling.svg" width="20px"/></td><td width="20px">2</td><td><b><code>chain_type</code></b></td></tr>
+<tr><td width="56px"><img src="docs/imgs/flag_conll.png" width="25"/></td><td width="56px"><img src="docs/imgs/flag_dem.png" width="25"/></td><td width="45px"><img src="docs/imgs/base.svg" width="20px"/></td><td width="20px">2</td><td><b><code>chain_coverage</code></b></td></tr>
+<tr><td width="56px"><img src="docs/imgs/flag_conll.png" width="25"/></td><td width="56px"><img src="docs/imgs/flag_dem.png" width="25"/></td><td width="45px"><img src="docs/imgs/base.svg" width="20px"/></td><td width="20px">2</td><td><b><code>chain_mean_token_dist</code></b></td></tr>
+<tr><td width="56px"><img src="docs/imgs/flag_conll.png" width="25"/></td><td width="56px"><img src="docs/imgs/flag_dem.png" width="25"/></td><td width="45px"><img src="docs/imgs/base.svg" width="20px"/></td><td width="20px">2</td><td><b><code>chain_median_token_dist</code></b></td></tr>
 </table>
 
 
@@ -566,18 +566,18 @@ The following fields are copied from the <code>chains</code> table for convenien
 Primary and foreign keys:
 
 <table width="100%" class="features">
-<tr><td width="30px"><img src="docs/imgs/flag_conll.png" width="25"/></td><td width="30px"><img src="docs/imgs/flag_dem.png" width="25"/></td><td width="25px"><img src="docs/imgs/base.svg" width="20px"/></td><td width="20px">1</td><td><b><code>id</code></b></td></tr>
-<tr><td width="30px"><img src="docs/imgs/flag_conll.png" width="25"/></td><td width="30px"><img src="docs/imgs/flag_dem.png" width="25"/></td><td width="25px"><img src="docs/imgs/base.svg" width="20px"/></td><td width="20px">1</td><td><b><code>par_id</code></b></td></tr>
-<tr><td width="30px"><img src="docs/imgs/flag_conll.png" width="25"/></td><td width="30px"><img src="docs/imgs/flag_dem.png" width="25"/></td><td width="25px"><img src="docs/imgs/base.svg" width="20px"/></td><td width="20px">1</td><td><b><code>sent_id</code></b></td></tr>
-<tr><td width="30px"><img src="docs/imgs/flag_conll.png" width="25"/></td><td width="30px"><img src="docs/imgs/flag_dem.png" width="25"/></td><td width="25px"><img src="docs/imgs/base.svg" width="20px"/></td><td width="20px">1</td><td><b><code>text_id</code></b></td></tr>
+<tr><td width="56px"><img src="docs/imgs/flag_conll.png" width="25"/></td><td width="56px"><img src="docs/imgs/flag_dem.png" width="25"/></td><td width="45px"><img src="docs/imgs/base.svg" width="20px"/></td><td width="20px">1</td><td><b><code>id</code></b></td></tr>
+<tr><td width="56px"><img src="docs/imgs/flag_conll.png" width="25"/></td><td width="56px"><img src="docs/imgs/flag_dem.png" width="25"/></td><td width="45px"><img src="docs/imgs/base.svg" width="20px"/></td><td width="20px">1</td><td><b><code>par_id</code></b></td></tr>
+<tr><td width="56px"><img src="docs/imgs/flag_conll.png" width="25"/></td><td width="56px"><img src="docs/imgs/flag_dem.png" width="25"/></td><td width="45px"><img src="docs/imgs/base.svg" width="20px"/></td><td width="20px">1</td><td><b><code>sent_id</code></b></td></tr>
+<tr><td width="56px"><img src="docs/imgs/flag_conll.png" width="25"/></td><td width="56px"><img src="docs/imgs/flag_dem.png" width="25"/></td><td width="45px"><img src="docs/imgs/base.svg" width="20px"/></td><td width="20px">1</td><td><b><code>text_id</code></b></td></tr>
 </table>
 
 Token features:
 
 <table width="100%" class="features">
-<tr><td width="30px"><img src="docs/imgs/flag_conll.png" width="25"/></td><td width="30px"><img src="docs/imgs/flag_dem.png" width="25"/></td><td width="25px"><img src="docs/imgs/base.svg" width="20px"/></td><td width="20px">1</td><td><b><code>text_token_index</code></b>: position of the token in the text</td></tr>
-<tr><td width="30px"><img src="docs/imgs/flag_conll.png" width="25"/></td><td width="30px"><img src="docs/imgs/flag_dem.png" width="25"/></td><td width="25px"><img src="docs/imgs/base.svg" width="20px"/></td><td width="20px">1</td><td><b><code>string</code></b>: the content of the token</td></tr>
-<tr><td width="30px"><img src="docs/imgs/flag_conll.png" width="25"/></td><td width="30px"><img src="docs/imgs/flag_dem.png" width="25"/></td><td width="25px"><img src="docs/imgs/ling.svg" width="20px"/></td><td width="20px">2</td><td><b><code>pos</code></b>: the part of speech</td></tr>
+<tr><td width="56px"><img src="docs/imgs/flag_conll.png" width="25"/></td><td width="56px"><img src="docs/imgs/flag_dem.png" width="25"/></td><td width="45px"><img src="docs/imgs/base.svg" width="20px"/></td><td width="20px">1</td><td><b><code>text_token_index</code></b>: position of the token in the text</td></tr>
+<tr><td width="56px"><img src="docs/imgs/flag_conll.png" width="25"/></td><td width="56px"><img src="docs/imgs/flag_dem.png" width="25"/></td><td width="45px"><img src="docs/imgs/base.svg" width="20px"/></td><td width="20px">1</td><td><b><code>string</code></b>: the content of the token</td></tr>
+<tr><td width="56px"><img src="docs/imgs/flag_conll.png" width="25"/></td><td width="56px"><img src="docs/imgs/flag_dem.png" width="25"/></td><td width="45px"><img src="docs/imgs/ling.svg" width="20px"/></td><td width="20px">2</td><td><b><code>pos</code></b>: the part of speech</td></tr>
 </table>
 
 
@@ -587,18 +587,18 @@ Token features:
 Primary and foreign keys:
 
 <table width="100%" class="features">
-<tr><td width="30px"><img src="docs/imgs/flag_conll.png" width="25"/></td><td width="30px"><img src="docs/imgs/flag_dem.png" width="25"/></td><td width="25px"><img src="docs/imgs/base.svg" width="20px"/></td><td width="20px">1</td><td><b><code>id</code></b></td></tr>
-<tr><td width="30px"><img src="docs/imgs/flag_conll.png" width="25"/></td><td width="30px"><img src="docs/imgs/flag_dem.png" width="25"/></td><td width="25px"><img src="docs/imgs/base.svg" width="20px"/></td><td width="20px">1</td><td><b><code>par_id</code></b></td></tr>
-<tr><td width="30px"><img src="docs/imgs/flag_conll.png" width="25"/></td><td width="30px"><img src="docs/imgs/flag_dem.png" width="25"/></td><td width="25px"><img src="docs/imgs/base.svg" width="20px"/></td><td width="20px">1</td><td><b><code>text_id</code></b></td></tr>
+<tr><td width="56px"><img src="docs/imgs/flag_conll.png" width="25"/></td><td width="56px"><img src="docs/imgs/flag_dem.png" width="25"/></td><td width="45px"><img src="docs/imgs/base.svg" width="20px"/></td><td width="20px">1</td><td><b><code>id</code></b></td></tr>
+<tr><td width="56px"><img src="docs/imgs/flag_conll.png" width="25"/></td><td width="56px"><img src="docs/imgs/flag_dem.png" width="25"/></td><td width="45px"><img src="docs/imgs/base.svg" width="20px"/></td><td width="20px">1</td><td><b><code>par_id</code></b></td></tr>
+<tr><td width="56px"><img src="docs/imgs/flag_conll.png" width="25"/></td><td width="56px"><img src="docs/imgs/flag_dem.png" width="25"/></td><td width="45px"><img src="docs/imgs/base.svg" width="20px"/></td><td width="20px">1</td><td><b><code>text_id</code></b></td></tr>
 </table>
 
 Positions:
 
 <table width="100%" class="features">
-<tr><td width="30px"><img src="docs/imgs/flag_conll.png" width="25"/></td><td width="30px"><img src="docs/imgs/flag_dem.png" width="25"/></td><td width="25px"><img src="docs/imgs/base.svg" width="20px"/></td><td width="20px">1</td><td><b><code>{first,last}_token_index</code></b>: index (in the text) of the first and last token of the sentence</td></tr>
-<tr><td width="30px"><img src="docs/imgs/flag_conll.png" width="25"/></td><td width="30px"><img src="docs/imgs/flag_dem.png" width="25"/></td><td width="25px"><img src="docs/imgs/base.svg" width="20px"/></td><td width="20px">1</td><td><b><code>par_sent_index</code></b>: index of the sentence in the paragraph (first sentence has index 0)</td></tr>
-<tr><td width="30px"><img src="docs/imgs/flag_conll.png" width="25"/></td><td width="30px"><img src="docs/imgs/flag_dem.png" width="25"/></td><td width="25px"><img src="docs/imgs/base.svg" width="20px"/></td><td width="20px">1</td><td><b><code>text_sent_index</code></b>: index of the sentence in the text (first sentence has index 0)</td></tr>
-<tr><td width="30px"><img src="docs/imgs/flag_conll.png" width="25"/></td><td width="30px"><img src="docs/imgs/flag_dem.png" width="25"/></td><td width="25px"><img src="docs/imgs/base.svg" width="20px"/></td><td width="20px">1</td><td><b><code>text_par_index</code></b>: index of the paragraph (in which the sentence is) in the text (first paragraph has index 0)</td></tr>
+<tr><td width="56px"><img src="docs/imgs/flag_conll.png" width="25"/></td><td width="56px"><img src="docs/imgs/flag_dem.png" width="25"/></td><td width="45px"><img src="docs/imgs/base.svg" width="20px"/></td><td width="20px">1</td><td><b><code>{first,last}_token_index</code></b>: index (in the text) of the first and last token of the sentence</td></tr>
+<tr><td width="56px"><img src="docs/imgs/flag_conll.png" width="25"/></td><td width="56px"><img src="docs/imgs/flag_dem.png" width="25"/></td><td width="45px"><img src="docs/imgs/base.svg" width="20px"/></td><td width="20px">1</td><td><b><code>par_sent_index</code></b>: index of the sentence in the paragraph (first sentence has index 0)</td></tr>
+<tr><td width="56px"><img src="docs/imgs/flag_conll.png" width="25"/></td><td width="56px"><img src="docs/imgs/flag_dem.png" width="25"/></td><td width="45px"><img src="docs/imgs/base.svg" width="20px"/></td><td width="20px">1</td><td><b><code>text_sent_index</code></b>: index of the sentence in the text (first sentence has index 0)</td></tr>
+<tr><td width="56px"><img src="docs/imgs/flag_conll.png" width="25"/></td><td width="56px"><img src="docs/imgs/flag_dem.png" width="25"/></td><td width="45px"><img src="docs/imgs/base.svg" width="20px"/></td><td width="20px">1</td><td><b><code>text_par_index</code></b>: index of the paragraph (in which the sentence is) in the text (first paragraph has index 0)</td></tr>
 </table>
 
 
@@ -609,15 +609,15 @@ Positions:
 Primary and foreign keys:
 
 <table width="100%" class="features">
-<tr><td width="30px"><img src="docs/imgs/flag_conll.png" width="25"/></td><td width="30px"><img src="docs/imgs/flag_dem.png" width="25"/></td><td width="25px"><img src="docs/imgs/base.svg" width="20px"/></td><td width="20px">1</td><td><b><code>id</code></b></td></tr>
-<tr><td width="30px"><img src="docs/imgs/flag_conll.png" width="25"/></td><td width="30px"><img src="docs/imgs/flag_dem.png" width="25"/></td><td width="25px"><img src="docs/imgs/base.svg" width="20px"/></td><td width="20px">1</td><td><b><code>text_id</code></b></td></tr>
+<tr><td width="56px"><img src="docs/imgs/flag_conll.png" width="25"/></td><td width="56px"><img src="docs/imgs/flag_dem.png" width="25"/></td><td width="45px"><img src="docs/imgs/base.svg" width="20px"/></td><td width="20px">1</td><td><b><code>id</code></b></td></tr>
+<tr><td width="56px"><img src="docs/imgs/flag_conll.png" width="25"/></td><td width="56px"><img src="docs/imgs/flag_dem.png" width="25"/></td><td width="45px"><img src="docs/imgs/base.svg" width="20px"/></td><td width="20px">1</td><td><b><code>text_id</code></b></td></tr>
 </table>
 
 Positions:
 
 <table width="100%" class="features">
-<tr><td width="30px"><img src="docs/imgs/flag_conll.png" width="25"/></td><td width="30px"><img src="docs/imgs/flag_dem.png" width="25"/></td><td width="25px"><img src="docs/imgs/base.svg" width="20px"/></td><td width="20px">1</td><td><b><code>{first,last}_token_index</code></b>: index (in the text) of the first and last token of the sentence</td></tr>
-<tr><td width="30px"><img src="docs/imgs/flag_conll.png" width="25"/></td><td width="30px"><img src="docs/imgs/flag_dem.png" width="25"/></td><td width="25px"><img src="docs/imgs/base.svg" width="20px"/></td><td width="20px">1</td><td><b><code>text_par_index</code></b>: index of the paragraph in the text (first paragraph of the text has index 0)</td></tr>
+<tr><td width="56px"><img src="docs/imgs/flag_conll.png" width="25"/></td><td width="56px"><img src="docs/imgs/flag_dem.png" width="25"/></td><td width="45px"><img src="docs/imgs/base.svg" width="20px"/></td><td width="20px">1</td><td><b><code>{first,last}_token_index</code></b>: index (in the text) of the first and last token of the sentence</td></tr>
+<tr><td width="56px"><img src="docs/imgs/flag_conll.png" width="25"/></td><td width="56px"><img src="docs/imgs/flag_dem.png" width="25"/></td><td width="45px"><img src="docs/imgs/base.svg" width="20px"/></td><td width="20px">1</td><td><b><code>text_par_index</code></b>: index of the paragraph in the text (first paragraph of the text has index 0)</td></tr>
 </table>
 
 
@@ -629,47 +629,47 @@ Positions:
 Primary and foreign keys:
 
 <table width="100%" class="features">
-<tr><td width="30px"><img src="docs/imgs/flag_conll.png" width="25"/></td><td width="30px"><img src="docs/imgs/flag_dem.png" width="25"/></td><td width="25px"><img src="docs/imgs/base.svg" width="20px"/></td><td width="20px">1</td><td><b><code>id</code></b></td></tr>
+<tr><td width="56px"><img src="docs/imgs/flag_conll.png" width="25"/></td><td width="56px"><img src="docs/imgs/flag_dem.png" width="25"/></td><td width="45px"><img src="docs/imgs/base.svg" width="20px"/></td><td width="20px">1</td><td><b><code>id</code></b></td></tr>
 </table>
 
 Counts:
 
 <table width="100%" class="features">
-<tr><td width="30px"><img src="docs/imgs/flag_conll.png" width="25"/></td><td width="30px"><img src="docs/imgs/flag_dem.png" width="25"/></td><td width="25px"><img src="docs/imgs/base.svg" width="20px"/></td><td width="20px">2</td><td><b><code>{token,mention,chain,sent,par}_count</code></b></td></tr>
+<tr><td width="56px"><img src="docs/imgs/flag_conll.png" width="25"/></td><td width="56px"><img src="docs/imgs/flag_dem.png" width="25"/></td><td width="45px"><img src="docs/imgs/base.svg" width="20px"/></td><td width="20px">2</td><td><b><code>{token,mention,chain,sent,par}_count</code></b></td></tr>
 </table>
 
 Caracteristics of the text:
 
 <table width="100%" class="features">
-<tr><td width="30px"><img src="docs/imgs/flag_conll.png" width="25"/></td><td width="30px"><img src="docs/imgs/flag_dem.png" width="25"/></td><td width="25px"><img src="docs/imgs/base.svg" width="20px"/></td><td width="20px">1</td><td><b><code>genre</code></b>: one of the predefined genres for CoNLL (<code>nw, pt</code>, etc.); for Democrat: <code>wk, pr, ot</code> (wikipedia, press, other); for Ancor, one of the subcorpus (<code>ot, co, es, ub</code>).</td></tr>
-<tr><td width="30px"><img src="docs/imgs/flag_conll.png" width="25"/></td><td width="30px"></td><td width="25px"><img src="docs/imgs/ling.svg" width="20px"/></td><td width="20px">1</td><td><b><code>source</code></b>: the source (for CoNLL: CNN, MSNBC, etc.)</td></tr>
+<tr><td width="56px"><img src="docs/imgs/flag_conll.png" width="25"/></td><td width="56px"><img src="docs/imgs/flag_dem.png" width="25"/></td><td width="45px"><img src="docs/imgs/base.svg" width="20px"/></td><td width="20px">1</td><td><b><code>genre</code></b>: one of the predefined genres for CoNLL (<code>nw, pt</code>, etc.); for Democrat: <code>wk, pr, ot</code> (wikipedia, press, other); for Ancor, one of the subcorpus (<code>ot, co, es, ub</code>).</td></tr>
+<tr><td width="56px"><img src="docs/imgs/flag_conll.png" width="25"/></td><td width="56px"></td><td width="45px"><img src="docs/imgs/ling.svg" width="20px"/></td><td width="20px">1</td><td><b><code>source</code></b>: the source (for CoNLL: CNN, MSNBC, etc.)</td></tr>
 </table>
 
 Mentions in the text:
 
 <table width="100%" class="features">
-<tr><td width="30px"><img src="docs/imgs/flag_conll.png" width="25"/></td><td width="30px"><img src="docs/imgs/flag_dem.png" width="25"/></td><td width="25px"><img src="docs/imgs/base.svg" width="20px"/></td><td width="20px">2</td><td><b><code>outer_proportion</code></b></td></tr>
-<tr><td width="30px"><img src="docs/imgs/flag_conll.png" width="25"/></td><td width="30px"><img src="docs/imgs/flag_dem.png" width="25"/></td><td width="25px"><img src="docs/imgs/base.svg" width="20px"/></td><td width="20px">2</td><td><b><code>mean_mention_level</code></b></td></tr>
+<tr><td width="56px"><img src="docs/imgs/flag_conll.png" width="25"/></td><td width="56px"><img src="docs/imgs/flag_dem.png" width="25"/></td><td width="45px"><img src="docs/imgs/base.svg" width="20px"/></td><td width="20px">2</td><td><b><code>outer_proportion</code></b></td></tr>
+<tr><td width="56px"><img src="docs/imgs/flag_conll.png" width="25"/></td><td width="56px"><img src="docs/imgs/flag_dem.png" width="25"/></td><td width="45px"><img src="docs/imgs/base.svg" width="20px"/></td><td width="20px">2</td><td><b><code>mean_mention_level</code></b></td></tr>
 </table>
 
 Relations in the text:
 
 <table width="100%" class="features">
-<tr><td width="30px"><img src="docs/imgs/flag_conll.png" width="25"/></td><td width="30px"><img src="docs/imgs/flag_dem.png" width="25"/></td><td width="25px"><img src="docs/imgs/base.svg" width="20px"/></td><td width="20px">2</td><td><b><code>{mean,median}_{token,mention,sent,par}_dist</code></b></td></tr>
+<tr><td width="56px"><img src="docs/imgs/flag_conll.png" width="25"/></td><td width="56px"><img src="docs/imgs/flag_dem.png" width="25"/></td><td width="45px"><img src="docs/imgs/base.svg" width="20px"/></td><td width="20px">2</td><td><b><code>{mean,median}_{token,mention,sent,par}_dist</code></b></td></tr>
 </table>
 
 Chains in the text:
 
 <table width="100%" class="features">
-<tr><td width="30px"><img src="docs/imgs/flag_conll.png" width="25"/></td><td width="30px"><img src="docs/imgs/flag_dem.png" width="25"/></td><td width="25px"><img src="docs/imgs/base.svg" width="20px"/></td><td width="20px">2</td><td><b><code>chain_ngrams</code></b>: number of different tri-grams of mentions (each chain been represented by an id) divided by the total number of mentions.  For exemple, let there be three chains A, B and C, and the following mentions: AABABCC; the tri-grams are AAB (mention of chain A followed by a mention of chain A followed by a mention of chain B), ABA, etc. See Landragin, Frédéric (2016). <emph>Conception d'un outil de visualisation et d'exploration de chaînes de coréférences.</emph> JADT 2016: 13ème Journées internationales d’Analyse statistique des Données Textuelles.</td></tr>
+<tr><td width="56px"><img src="docs/imgs/flag_conll.png" width="25"/></td><td width="56px"><img src="docs/imgs/flag_dem.png" width="25"/></td><td width="45px"><img src="docs/imgs/base.svg" width="20px"/></td><td width="20px">2</td><td><b><code>chain_ngrams</code></b>: number of different tri-grams of mentions (each chain been represented by an id) divided by the total number of mentions.  For exemple, let there be three chains A, B and C, and the following mentions: AABABCC; the tri-grams are AAB (mention of chain A followed by a mention of chain A followed by a mention of chain B), ABA, etc. See Landragin, Frédéric (2016). <emph>Conception d'un outil de visualisation et d'exploration de chaînes de coréférences.</emph> JADT 2016: 13ème Journées internationales d’Analyse statistique des Données Textuelles.</td></tr>
 </table>
 
 Lexical diversity of the text:
 
 <table width="100%" class="features">
-<tr><td width="30px"><img src="docs/imgs/flag_conll.png" width="25"/></td><td width="30px"><img src="docs/imgs/flag_dem.png" width="25"/></td><td width="25px"><img src="docs/imgs/base.svg" width="20px"/></td><td width="20px">2</td><td><b><code>ttr</code></b>: token type ratio</td></tr>
-<tr><td width="30px"><img src="docs/imgs/flag_conll.png" width="25"/></td><td width="30px"><img src="docs/imgs/flag_dem.png" width="25"/></td><td width="25px"><img src="docs/imgs/base.svg" width="20px"/></td><td width="20px">2</td><td><b><code>yule_s_k</code></b>: Yule’s K (Yule, Udny (1944). The Statistical study of Literary Vocabulary. Cambridge University Press.)</td></tr>
-<tr><td width="30px"><img src="docs/imgs/flag_conll.png" width="25"/></td><td width="30px"><img src="docs/imgs/flag_dem.png" width="25"/></td><td width="25px"><img src="docs/imgs/base.svg" width="20px"/></td><td width="20px">2</td><td><b><code>yule_s_i</code></b>: Yule’s I (Oakes, Michael (1998). Statistics for Corpus Linguistics. Edingburgh University Press.)</td></tr>
+<tr><td width="56px"><img src="docs/imgs/flag_conll.png" width="25"/></td><td width="56px"><img src="docs/imgs/flag_dem.png" width="25"/></td><td width="45px"><img src="docs/imgs/base.svg" width="20px"/></td><td width="20px">2</td><td><b><code>ttr</code></b>: token type ratio</td></tr>
+<tr><td width="56px"><img src="docs/imgs/flag_conll.png" width="25"/></td><td width="56px"><img src="docs/imgs/flag_dem.png" width="25"/></td><td width="45px"><img src="docs/imgs/base.svg" width="20px"/></td><td width="20px">2</td><td><b><code>yule_s_k</code></b>: Yule’s K (Yule, Udny (1944). The Statistical study of Literary Vocabulary. Cambridge University Press.)</td></tr>
+<tr><td width="56px"><img src="docs/imgs/flag_conll.png" width="25"/></td><td width="56px"><img src="docs/imgs/flag_dem.png" width="25"/></td><td width="45px"><img src="docs/imgs/base.svg" width="20px"/></td><td width="20px">2</td><td><b><code>yule_s_i</code></b>: Yule’s I (Oakes, Michael (1998). Statistics for Corpus Linguistics. Edingburgh University Press.)</td></tr>
 </table>
 
 
@@ -831,7 +831,7 @@ Then run the `db_builder.py` script:
 
 ```bash
 python3 db_builder.py --corpus-name conll2012 --linguistic --advanced \
-   -o db_conll.zip everything.conll 
+   -o db_conll.zip everything.conll
 ```
 
 If you have any trouble using the scripts, please contact me through my [website](http://boblerle.com).
@@ -858,7 +858,7 @@ python3 db_builder.py --corpus-name dem1921 --linguistic --advanced \
    -o /tmp/db_dem1921.zip INPUT.conll
 # ancor
 python3 db_builder.py --corpus-name ancor --linguistic --advanced \
-   -o /tmp/db_ancor.zip INPUT.conll 
+   -o /tmp/db_ancor.zip INPUT.conll
 ```
 
 This assumes that you have the `INPUT.conll` files.  For Ancor and Democrat, you can choose one of the conll files from the `ancor` and `democrat` directories.  For CoNLL, you must build it from the data provided by the LDC and the CoNLL-2012 shared task (see above), or use the [trial data](http://conll.cemantix.org/2012/download/conll-2012-trial-data.tar.gz).
@@ -887,4 +887,3 @@ If you use the modified corpora:
 
 - Ancor and Demorat are released under Creative Commons licenses (see details above).  You must give appropriate credit to the original authors by citing the papers mentionned above and to myself.
 - OntoNotes (from which CoNLL is derived) comes with its own license, which you have agreed to when you have downloaded the corpus from the LDC webiste.  You must follow it.
-
