@@ -5,7 +5,7 @@ This repository contains French and English coreference databases and corpora in
 In this presentation document, you will find:
 
 - an <a href="#introduction">introduction</a>,
-- a list of <a href="#corpora">corpora</a> (CoNLL, Democrat, Ancor) and how I have added annotation layers to the <a href="#added-democrat">Democrat</a> corpus (the same annotation layers have been added to Ancor),
+- a list of <a href="#corpora">corpora</a> (CoNLL, Democrat, Ancor) and how I have <a href="#added-democrat">added annotation layers to the Democrat</a> corpus (the same annotation layers have been added to Ancor),
 - the representation of the corpora and all their linguistic annotations as a <a href="#databases">relational databases</a>, with a <a href="#fields">complete list of all the fields for each table</a>, and the <a href="#values">possible values</a>,
 - the <a href="#formats">other formats</a> (conll, jsonlines) the corpora are available in,
 - the <a href="#availability">availability</a> of the corpora and their licenses with all the legal stuff from the original corpora,
