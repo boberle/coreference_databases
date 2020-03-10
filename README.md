@@ -44,7 +44,7 @@ to train both ODACR and [COFR](https://github.com/boberle/cofr) and described in
 
 
 
-### Adding annotation layers to Democrat (19th to 21st-century texts) <a name="added-democrat"/>
+### Annotation layers added to Democrat (19th to 21st-century texts) <a name="added-democrat"/>
 
 Most of the texts from the Democrat corpus are narratives, usually 10k word-long extracts from novels, short stories and biographies.  But there are also Wikipedia articles and 103 press articles.  These texts are concatenated into one document in the original distribution: I have separated them using their "natural boundaries" (that is, the beginning and the end of the text).  For the modern part of the Democrat corpus, I have kept only texts from the 19th to the 21st centuries, hence the name of the subcorpus: "Dem1921".  Five documents are excerpts from legal texts; I have excluded them since they are written in a specialized legal language.
 
