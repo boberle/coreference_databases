@@ -1,4 +1,4 @@
-# The `dem1921` directory
+# The `democrat_dem1921` directory
 
 ## List of files
 
