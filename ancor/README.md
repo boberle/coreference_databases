@@ -13,6 +13,28 @@ The LREC 2020 paper:
 > [Wilkens Rodrigo, Oberle Bruno, Landragin Frédéric, Todirascu Amalia (2020). **French coreference for spoken and written language**, _Proceedings of the 12th Edition of the Language Resources and Evaluation Conference (LREC 2020)_, Marseille, France](https://lrec2020.lrec-conf.org/en/).
 
 
+## Formats
+
+See the root README file for details.  Here is a reminder of the columns for the conll format:
+
+1. **index** of the token in the sentence
+1. **form** of the token
+1. **lemma** of the token
+1. universal **part-of-speech** tag.
+1. always `_` (language-specific part-of-speech tag, not used)
+1. **morphological features** (see [universal dependencies](https://universaldependencies.org))
+1. **head** of the current token (an **index** of another word or 0 for root)
+1. universal **dependency relation** to the **head** (or `root`) (see [universal dependencies](https://universaldependencies.org))
+1. always `_` (enhanced dependencies, not used)
+1. always `_` (other annotation, not used)
+1. speaker (or `_` for Democrat, where no speaker is recorded)
+1. paragraph number
+1. named entity in the format `(PER * * *)` (ex. with 4 tokens)
+1. named entity in the format `(PER PER PER PER)` (ex. with 4 tokens)
+1. coreference in conll-2012 style
+
+
+
 ## License
 
 This work is adapted from the Ancor-Centre corpus, which is freely available from the [corpus website](http://www.info.univ-tours.fr/~antoine/parole_publique/ANCOR_Centre/index.html).

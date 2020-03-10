@@ -60,7 +60,7 @@ First, I used the _StanfordNLP_ dependency parser to perform tokenization and se
 
 Lemmatization has been done by a lookup in a morphological and syntactic lexicon (_Lefff_).
 
-I have added named entities with the _Flair_ tool.  Four types are defined: persons (`PERS`), locations (`LOC`), organizations (`ORG`) and a miscellaneous (`MISC`) category (usually when the tool was unable to categorize a detected entity into one of the three previous categories).  After a error analysis, I kept all the `PERS`, `LOC` and `ORG`.  From the `MISC` entities, only those with a probability higher then 0.8 have been kept, and for those, I have corrected the list manually.  For the `MISC` entities the text of which was found elsewhere in the text with a different type, I subsituted the `MISC` type by the other type.  For example, if "Peter" was here `PERS` and there `MISC`, I gave it the category `PERS` everywhere.
+I have added named entities with the _Flair_ tool.  Four types are defined: persons (`PER`), locations (`LOC`), organizations (`ORG`) and a miscellaneous (`MISC`) category (usually when the tool was unable to categorize a detected entity into one of the three previous categories).  After a error analysis, I kept all the `PER`, `LOC` and `ORG`.  From the `MISC` entities, only those with a probability higher then 0.8 have been kept, and for those, I have corrected the list manually.  For the `MISC` entities the text of which was found elsewhere in the text with a different type, I subsituted the `MISC` type by the other type.  For example, if "Peter" was here `PER` and there `MISC`, I gave it the category `PER` everywhere.
 
 The output format is CoNLL-U, with supplementary columns for named entities, paragraph number, and, of course, coreference chain.
 
@@ -260,7 +260,7 @@ Named entity:
 <tr><td width="56px"><img src="docs/imgs/flag_conll.png" width="25"/></td><td width="56px"><img src="docs/imgs/flag_dem.png" width="25"/></td><td width="45px"><img src="docs/imgs/ling.svg" width="20px"/></td><td width="20px">1</td><td><b><code>named_entity_type</code></b>: types vary according to the corpora (18 types for CoNLL, 4 types for Democrat/Ancor, see the complete list of values)</td></tr>
 <tr><td width="56px"><img src="docs/imgs/flag_conll.png" width="25"/></td><td width="56px"><img src="docs/imgs/flag_dem.png" width="25"/></td><td width="45px"><img src="docs/imgs/ling.svg" width="20px"/></td><td width="20px">1</td><td><b><code>is_named_entity</code></b>: whether the mention is a named entity</td></tr>
 <tr><td width="56px"><img src="docs/imgs/flag_conll.png" width="25"/></td><td width="56px"></td><td width="45px"><img src="docs/imgs/ling.svg" width="20px"/></td><td width="20px">1</td><td><b><code>is_name</code></b>: whether the mention is a named entity is of one of the types PERSON, FACILITY, ORG, GPE, WORK OF ART, NORP, LOCATION, PRODUCT, EVENT, LAW, LANGUAGE</td></tr>
-<tr><td width="56px"></td><td width="56px"><img src="docs/imgs/flag_dem.png" width="25"/></td><td width="45px"><img src="docs/imgs/ling.svg" width="20px"/></td><td width="20px">1</td><td><b><code>is_pers</code></b>: whether the mention is a named entity is of one of the type PERS</td></tr>
+<tr><td width="56px"></td><td width="56px"><img src="docs/imgs/flag_dem.png" width="25"/></td><td width="45px"><img src="docs/imgs/ling.svg" width="20px"/></td><td width="20px">1</td><td><b><code>is_pers</code></b>: whether the mention is a named entity is of one of the type PER</td></tr>
 </table>
 
 Speaker:
@@ -682,6 +682,8 @@ Please see the file [`docs/all_possible_values.md`](docs/all_possible_values.md)
 
 ## Database formats and other formats <a name="formats"/>
 
+### CSV files
+
 The corpora are available in three formats:
 
 The **database format** is just a zip file containing the csv files for each table, which can be imported into any software (even in Microsfot Excel, some hints on how to use this in Excel may be found [here](http://boberle.com/publications/res/Oberle-2019_cardiff.pdf)):
@@ -695,6 +697,8 @@ paragraphs.csv
 sentences.csv
 tokens.csv
 ```
+
+### CoNLL format
 
 The **CoNLL format** is a tabular format: each token is on a separate line and annotation for the token are on separate column.  Document boundaries are indicated by specific marks, and sentence separation by a white line.
 
@@ -719,6 +723,46 @@ Here is an example:
 ...
 #end document
 ```
+
+The original CoNLL-2012 (used for the CoNLL-2012 corpus that is not available in this directory because of copyright restrictions) is described in Pradhan _et al._ (2012), _CoNLL-2012 Shared Task: Modeling Multilingual Unrestricted Coreference in OntoNotes_.  Here is the list of columns (which are separated by any number of spaces):
+
+```
+1.    Document ID
+2.    Part number
+3.    Word number
+4.    Word
+5.    Part of Speech
+6.    Parse bit
+7.    Lemma
+8.    Predicate Frameset ID
+9.    Word sense
+10.   Speaker/Author
+11.   Named Entities
+12:N. Predicate Arguments
+N.    Coreference
+```
+
+For Democrat (the augmented version: dem1921) and Ancor, the list of columns (separated by tabulation) is the list of [conll-u](https://universaldependencies.org/format.html) augmented with columns for the speaker, the paragraph, the named entity type (2 columns), the coreference.  So, in total:
+
+1. **index** of the token in the sentence
+1. **form** of the token
+1. **lemma** of the token
+1. universal **part-of-speech** tag.
+1. always `_` (language-specific part-of-speech tag, not used)
+1. **morphological features** (see [universal dependencies](https://universaldependencies.org))
+1. **head** of the current token (an **index** of another word or 0 for root)
+1. universal **dependency relation** to the **head** (or `root`) (see [universal dependencies](https://universaldependencies.org))
+1. always `_` (enhanced dependencies, not used)
+1. always `_` (other annotation, not used)
+1. speaker (or `_` for Democrat, where no speaker is recorded)
+1. paragraph number
+1. named entity in the format `(PER * * *)` (ex. with 4 tokens)
+1. named entity in the format `(PER PER PER PER)` (ex. with 4 tokens)
+1. coreference in conll-2012 style
+
+
+### Jsonlines format
+
 
 The **jsonlines format** stores data for several texts (a corpus).  Each line is a valid json document, as follows:
 
